@@ -1,0 +1,137 @@
+/* ============================================================================
+   PetMami — small overrides on top of Tailwind (CDN)
+   Everything else is Tailwind utility classes in the HTML.
+   Semantic pm-* classes are here so .NET can target them without touching
+   utility classes.
+   ========================================================================== */
+
+/* Brand tokens (also configured in tailwind.config on each page) */
+:root {
+  --pm-navy: #0F2B3C;
+  --pm-teal: #14A395;
+  --pm-tealdark: #0E7F74;
+  --pm-coral: #F2705F;
+  --pm-gold: #E9A64A;
+}
+
+/* Headings use the rounded display face, matching the logo wordmark */
+h1, h2, h3, .font-display { font-family: 'Fredoka', 'Baloo Bhaijaan 2', sans-serif; }
+
+/* --------------------------------------------------------------------------
+   ARABIC / RTL
+   -------------------------------------------------------------------------- */
+html[dir="rtl"] body { font-family: 'Tajawal', sans-serif; }
+html[dir="rtl"] h1,
+html[dir="rtl"] h2,
+html[dir="rtl"] h3,
+html[dir="rtl"] .font-display { font-family: 'Baloo Bhaijaan 2', 'Tajawal', sans-serif; }
+html[dir="rtl"] body { line-height: 1.8; }
+/* Arabic script must never be letter-spaced — it breaks the joins */
+html[dir="rtl"] * { letter-spacing: normal !important; }
+
+/* Directional icons point the reading direction */
+html[dir="rtl"] .pm-flip { transform: scaleX(-1); }
+
+/* Prices, phone numbers, SKUs and order numbers stay left-to-right
+   even inside Arabic text */
+.pm-ltr { direction: ltr; unicode-bidi: isolate; }
+
+/* Gradient scrims take physical directions, so mirror them by hand */
+.pm-scrim       { background: linear-gradient(to right, rgba(15,43,60,.88) 8%, rgba(15,43,60,.45) 55%, rgba(15,43,60,.05) 100%); }
+html[dir="rtl"] .pm-scrim { background: linear-gradient(to left, rgba(15,43,60,.88) 8%, rgba(15,43,60,.45) 55%, rgba(15,43,60,.05) 100%); }
+.pm-scrim-light { background: linear-gradient(to right, rgba(255,255,255,.95) 20%, rgba(255,255,255,.6) 66%, rgba(255,255,255,.1) 100%); }
+html[dir="rtl"] .pm-scrim-light { background: linear-gradient(to left, rgba(255,255,255,.95) 20%, rgba(255,255,255,.6) 66%, rgba(255,255,255,.1) 100%); }
+.pm-scrim-bottom { background: linear-gradient(to top, rgba(15,43,60,.9), rgba(15,43,60,0)); }
+
+/* --------------------------------------------------------------------------
+   SCROLLERS
+   -------------------------------------------------------------------------- */
+.no-scrollbar::-webkit-scrollbar { display: none; }
+.no-scrollbar { -ms-overflow-style: none; scrollbar-width: none; }
+
+.pm-scroller { scroll-snap-type: x mandatory; }
+.pm-scroller > * { scroll-snap-align: start; }
+
+/* --------------------------------------------------------------------------
+   PRODUCT CARD
+   -------------------------------------------------------------------------- */
+/* Two-line title keeps every card in a row the same height */
+.pm-product-name {
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 2;
+  overflow: hidden;
+  line-height: 1.35;
+  min-height: 2.7em;
+}
+.pm-price, .pm-price-old { white-space: nowrap; }
+
+.pm-product-card:hover .pm-product-img { transform: scale(1.06); }
+.pm-product-img { transition: transform .4s ease; }
+
+/* --------------------------------------------------------------------------
+   HERO SLIDER
+   -------------------------------------------------------------------------- */
+.pm-slide { display: none; }
+.pm-slide.is-active { display: block; }
+.pm-dot.is-active { width: 26px; background: #fff; }
+
+/* --------------------------------------------------------------------------
+   SELECTABLE CHIPS / VARIANTS / SLOTS
+   -------------------------------------------------------------------------- */
+.pm-chip.is-active,
+.pm-variant.is-active,
+.pm-slot.is-active {
+  background: var(--pm-teal);
+  border-color: var(--pm-teal);
+  color: #fff;
+}
+.pm-slot.is-active small { color: rgba(255,255,255,.85); }
+
+/* --------------------------------------------------------------------------
+   FORMS
+   -------------------------------------------------------------------------- */
+.pm-input:focus, .pm-select:focus, .pm-textarea:focus {
+  outline: none;
+  border-color: var(--pm-teal);
+  box-shadow: 0 0 0 3px rgba(20,163,149,.25);
+}
+/* Native select arrow sits on the reading-end side */
+.pm-select {
+  appearance: none;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='%238C9299' stroke-width='2'%3E%3Cpath d='M6 9l6 6 6-6'/%3E%3C/svg%3E");
+  background-repeat: no-repeat;
+  background-position: right 0.9rem center;
+  background-size: 18px;
+  padding-right: 2.4rem;
+}
+html[dir="rtl"] .pm-select {
+  background-position: left 0.9rem center;
+  padding-right: 0.9rem;
+  padding-left: 2.4rem;
+}
+/* Quantity inputs: no spinners */
+.pm-qty-input::-webkit-outer-spin-button,
+.pm-qty-input::-webkit-inner-spin-button { -webkit-appearance: none; margin: 0; }
+.pm-qty-input { -moz-appearance: textfield; }
+
+/* --------------------------------------------------------------------------
+   ACCESSIBILITY
+   -------------------------------------------------------------------------- */
+.pm-sr-only {
+  position: absolute; width: 1px; height: 1px; padding: 0; margin: -1px;
+  overflow: hidden; clip: rect(0 0 0 0); white-space: nowrap; border: 0;
+}
+:focus-visible { outline: 2px solid var(--pm-tealdark); outline-offset: 2px; border-radius: 6px; }
+
+@media (prefers-reduced-motion: reduce) {
+  * { animation-duration: .01ms !important; transition-duration: .01ms !important; }
+}
+
+/* --------------------------------------------------------------------------
+   PRINT (order confirmation / invoice)
+   -------------------------------------------------------------------------- */
+@media print {
+  .pm-header, .pm-footer, .pm-tabbar, .pm-whatsapp, .pm-offer-strip { display: none !important; }
+  body { background: #fff; padding: 0; }
+}

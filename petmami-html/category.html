@@ -1,0 +1,668 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Cat Dry Food — Buy Online in Kuwait | PetMami</title>
+  <meta name="description" content="Shop dry food for cats from Royal Canin, Farmina, Applaws and more. Same-day delivery across Kuwait." />
+
+  <!-- Tailwind CSS (CDN — no build step, plays well with .NET Razor) -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            brand: {
+              navy: '#0F2B3C',
+              teal: '#14A395',
+              tealdark: '#0E7F74',
+              teallight: '#E3F6F3',
+              coral: '#F2705F',
+              coraldark: '#D9503E',
+              corallight: '#FDECE9',
+              gold: '#E9A64A',
+              goldlight: '#FDF3E3',
+              cream: '#FFFCF8',
+            },
+          },
+          fontFamily: {
+            display: ['Fredoka', 'sans-serif'],
+            en: ['Nunito', 'sans-serif'],
+            ar: ['Tajawal', 'sans-serif'],
+          },
+        },
+      },
+    };
+  </script>
+
+  <!-- Fonts: Fredoka + Nunito (EN) · Baloo Bhaijaan 2 + Tajawal (AR) -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Fredoka:wght@400;500;600;700&family=Nunito:wght@400;600;700;800&family=Tajawal:wght@400;500;700;800&family=Baloo+Bhaijaan+2:wght@400;600;700&display=swap" rel="stylesheet" />
+
+  <link rel="stylesheet" href="css/custom.css" />
+  <link rel="icon" href="images/brand/logo.jpg" />
+</head>
+
+<body class="pm-page font-en bg-brand-cream text-brand-navy pb-16 md:pb-0">
+
+  <!-- ============================================================
+       PARTIAL: _OfferStrip  →  Views/Shared/_OfferStrip.cshtml
+       .NET: bind the threshold (10 KD) from settings
+  ============================================================ -->
+  <div class="pm-offer-strip bg-brand-navy text-white text-center text-[11px] sm:text-sm font-bold py-2 px-4">
+    <span data-en="🚚 Free delivery on orders above 10 KD · Same-day delivery across Kuwait"
+          data-ar="🚚 توصيل مجاني للطلبات فوق 10 د.ك · توصيل في نفس اليوم داخل الكويت">🚚 Free delivery on orders above 10 KD · Same-day delivery across Kuwait</span>
+  </div>
+
+  <!-- ============================================================
+       PARTIAL: _Header  →  Views/Shared/_Header.cshtml
+  ============================================================ -->
+  <header class="pm-header sticky top-0 z-40 bg-white/95 backdrop-blur border-b border-gray-100">
+    <div class="max-w-7xl mx-auto px-4 py-2.5 flex items-center gap-3 md:gap-5">
+
+      <button id="menuBtn" class="pm-burger lg:hidden p-2 -ms-2 rounded-full hover:bg-gray-100" aria-label="Menu">
+        <svg class="w-6 h-6" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" viewBox="0 0 24 24" aria-hidden="true"><path d="M3 12h18M3 6h18M3 18h18"/></svg>
+      </button>
+
+      <a href="index.html" class="pm-logo shrink-0">
+        <img src="images/brand/logo.jpg" alt="PetMami — Happy Pets, Happy Life" class="h-10 md:h-14 w-auto" />
+      </a>
+
+      <!-- Search -->
+      <div class="pm-search flex-1 max-w-xl hidden sm:block">
+        <div class="flex items-center gap-2 bg-brand-teallight rounded-full px-4 py-2">
+          <svg class="w-4 h-4 text-brand-tealdark shrink-0" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" viewBox="0 0 24 24" aria-hidden="true"><circle cx="11" cy="11" r="7"/><path d="m21 21-4.3-4.3"/></svg>
+          <input type="text" class="pm-search-input bg-transparent outline-none text-sm w-full placeholder-gray-500"
+                 data-placeholder-en="Search food, toys, brands..." data-placeholder-ar="ابحث عن طعام، ألعاب، ماركات..."
+                 placeholder="Search food, toys, brands..." />
+        </div>
+      </div>
+
+      <!-- Actions -->
+      <div class="pm-header-actions flex items-center gap-1 md:gap-2 shrink-0 ms-auto">
+        <button id="langToggle" class="pm-lang border border-gray-200 rounded-full px-3 py-1.5 text-xs font-extrabold hover:border-brand-teal hover:text-brand-tealdark transition"
+                data-en="العربية" data-ar="English">العربية</button>
+
+        <a href="login.html" class="p-2 rounded-full hover:bg-gray-100 hidden md:inline-flex" aria-label="Account"><svg class="w-5 h-5" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" viewBox="0 0 24 24" aria-hidden="true"><path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"/><circle cx="12" cy="7" r="4"/></svg></a>
+
+        <a href="account.html" class="relative p-2 rounded-full hover:bg-gray-100 hidden md:inline-flex" aria-label="Wishlist">
+          <svg class="w-5 h-5" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" viewBox="0 0 24 24" aria-hidden="true"><path d="M20.8 4.6a5.5 5.5 0 0 0-7.8 0L12 5.7l-1-1.1a5.5 5.5 0 0 0-7.8 7.8l1.1 1L12 21l7.7-7.7 1.1-1a5.5 5.5 0 0 0 0-7.7z"/></svg>
+          <span class="absolute top-0 end-0 bg-brand-coral text-white text-[10px] font-bold rounded-full min-w-[17px] h-[17px] flex items-center justify-center px-1">3</span>
+        </a>
+
+        <a href="cart.html" class="pm-cart-btn relative p-2 rounded-full hover:bg-gray-100" aria-label="Cart">
+          <svg class="w-5 h-5" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" viewBox="0 0 24 24" aria-hidden="true"><circle cx="9" cy="21" r="1"/><circle cx="20" cy="21" r="1"/><path d="M1 1h4l2.68 13.39a2 2 0 0 0 2 1.61h9.72a2 2 0 0 0 2-1.61L23 6H6"/></svg>
+          <span id="cartBadge" class="pm-cart-badge absolute top-0 end-0 bg-brand-coral text-white text-[10px] font-bold rounded-full min-w-[17px] h-[17px] flex items-center justify-center px-1">2</span>
+        </a>
+      </div>
+    </div>
+
+    <!-- Mobile search -->
+    <div class="sm:hidden px-4 pb-2.5">
+      <div class="flex items-center gap-2 bg-brand-teallight rounded-full px-4 py-2">
+        <svg class="w-4 h-4 text-brand-tealdark shrink-0" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" viewBox="0 0 24 24" aria-hidden="true"><circle cx="11" cy="11" r="7"/><path d="m21 21-4.3-4.3"/></svg>
+        <input type="text" class="bg-transparent outline-none text-sm w-full placeholder-gray-500"
+               data-placeholder-en="Search food, toys, brands..." data-placeholder-ar="ابحث عن طعام، ألعاب، ماركات..."
+               placeholder="Search food, toys, brands..." />
+      </div>
+    </div>
+
+    <!-- Desktop nav -->
+    <nav class="pm-nav hidden lg:block border-t border-gray-100">
+      <div class="max-w-7xl mx-auto px-4 flex items-center gap-6 text-sm font-bold text-gray-600 h-11">
+        <a href="category.html" class="pm-nav-link text-brand-tealdark " data-en="Cats" data-ar="القطط">Cats</a>
+        <a href="category.html" class="pm-nav-link text-brand-tealdark " data-en="Dogs" data-ar="الكلاب">Dogs</a>
+        <!-- PHASE 2 · PET TYPES — delete this comment marker and the one below to re-enable
+        <a href="category.html" class="pm-nav-link text-brand-tealdark " data-en="Birds" data-ar="الطيور">Birds</a>
+        <a href="category.html" class="pm-nav-link text-brand-tealdark " data-en="Fish" data-ar="الأسماك">Fish</a>
+        <a href="category.html" class="pm-nav-link text-brand-tealdark " data-en="Small Pets" data-ar="الحيوانات الصغيرة">Small Pets</a>
+        <a href="category.html" class="pm-nav-link text-brand-tealdark " data-en="Reptiles" data-ar="الزواحف">Reptiles</a>
+               PHASE 2 · PET TYPES ends here -->
+        <a href="brands.html" class="pm-nav-link hover:text-brand-tealdark " data-en="Brands" data-ar="الماركات">Brands</a>
+        <!-- PHASE 2 · SERVICES — delete this comment marker and the one below to re-enable
+        <a href="services.html" class="pm-nav-link hover:text-brand-tealdark " data-en="Services" data-ar="الخدمات">Services</a>
+               PHASE 2 · SERVICES ends here -->
+        <a href="blog.html" class="pm-nav-link hover:text-brand-tealdark " data-en="Pet Guides" data-ar="دليل الحيوانات">Pet Guides</a>
+        <a href="offers.html" class="pm-nav-link text-brand-coral font-extrabold ms-auto flex items-center gap-1">
+          <svg class="w-4 h-4" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 3v4M12 17v4M3 12h4M17 12h4M5.6 5.6l2.8 2.8M15.6 15.6l2.8 2.8M18.4 5.6l-2.8 2.8M8.4 15.6l-2.8 2.8"/></svg><span data-en="Offers" data-ar="العروض">Offers</span>
+        </a>
+      </div>
+    </nav>
+  </header>
+
+  <!-- Mobile drawer -->
+  <div id="drawerBackdrop" class="fixed inset-0 bg-black/40 z-40 hidden"></div>
+  <aside id="mobileDrawer" class="pm-drawer fixed inset-y-0 start-0 z-50 w-72 max-w-[85vw] bg-white shadow-xl -translate-x-full rtl:translate-x-full transition-transform duration-300 overflow-y-auto">
+    <div class="flex items-center justify-between p-4 border-b border-gray-100">
+      <img src="images/brand/logo.jpg" alt="PetMami" class="h-10 w-auto" />
+      <button id="drawerClose" class="p-2 rounded-full hover:bg-gray-100" aria-label="Close"><svg class="w-5 h-5" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" viewBox="0 0 24 24" aria-hidden="true"><path d="M18 6 6 18M6 6l12 12"/></svg></button>
+    </div>
+    <nav class="p-3 text-sm font-bold text-brand-navy">
+      <a href="category.html" class="flex items-center gap-3 p-3 rounded-xl hover:bg-brand-teallight" data-en="Cats" data-ar="القطط">Cats</a>
+      <a href="category.html" class="flex items-center gap-3 p-3 rounded-xl hover:bg-brand-teallight" data-en="Dogs" data-ar="الكلاب">Dogs</a>
+      <!-- PHASE 2 · PET TYPES — delete this comment marker and the one below to re-enable
+      <a href="category.html" class="flex items-center gap-3 p-3 rounded-xl hover:bg-brand-teallight" data-en="Birds" data-ar="الطيور">Birds</a>
+      <a href="category.html" class="flex items-center gap-3 p-3 rounded-xl hover:bg-brand-teallight" data-en="Fish" data-ar="الأسماك">Fish</a>
+      <a href="category.html" class="flex items-center gap-3 p-3 rounded-xl hover:bg-brand-teallight" data-en="Small Pets" data-ar="الحيوانات الصغيرة">Small Pets</a>
+      <a href="category.html" class="flex items-center gap-3 p-3 rounded-xl hover:bg-brand-teallight" data-en="Reptiles" data-ar="الزواحف">Reptiles</a>
+             PHASE 2 · PET TYPES ends here -->
+      <hr class="my-2 border-gray-100" />
+      <a href="offers.html" class="flex items-center gap-3 p-3 rounded-xl hover:bg-brand-teallight text-brand-coral" data-en="Offers" data-ar="العروض">Offers</a>
+      <!-- PHASE 2 · SERVICES — delete this comment marker and the one below to re-enable
+      <a href="services.html" class="flex items-center gap-3 p-3 rounded-xl hover:bg-brand-teallight" data-en="Services" data-ar="الخدمات">Services</a>
+             PHASE 2 · SERVICES ends here -->
+      <a href="blog.html" class="flex items-center gap-3 p-3 rounded-xl hover:bg-brand-teallight" data-en="Pet Guides" data-ar="دليل الحيوانات">Pet Guides</a>
+      <a href="account.html" class="flex items-center gap-3 p-3 rounded-xl hover:bg-brand-teallight" data-en="My account" data-ar="حسابي">My account</a>
+      <a href="login.html" class="flex items-center gap-3 p-3 rounded-xl hover:bg-brand-teallight" data-en="Sign in" data-ar="تسجيل الدخول">Sign in</a>
+    </nav>
+  </aside>
+
+  <main>
+    
+    <nav class="max-w-7xl mx-auto px-4 pt-4 text-xs text-gray-500 flex flex-wrap items-center gap-1.5" aria-label="Breadcrumb">
+      <a href="index.html" class="hover:text-brand-tealdark" data-en="Home" data-ar="الرئيسية">Home</a>
+      <svg class="w-3 h-3 pm-flip text-gray-300" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" viewBox="0 0 24 24" aria-hidden="true"><path d="m9 18 6-6-6-6"/></svg>
+      <a href="category.html" class="hover:text-brand-tealdark" data-en="Cats" data-ar="القطط">Cats</a>
+      <svg class="w-3 h-3 pm-flip text-gray-300" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" viewBox="0 0 24 24" aria-hidden="true"><path d="m9 18 6-6-6-6"/></svg>
+      <span class="text-brand-navy font-bold" aria-current="page" data-en="Dry Food" data-ar="طعام جاف">Dry Food</span>
+    </nav>
+
+    <div class="max-w-7xl mx-auto px-4 py-5">
+      <h1 class="font-display text-3xl font-semibold" data-en="Cat Dry Food" data-ar="طعام القطط الجاف">Cat Dry Food</h1>
+      <p class="text-sm text-gray-500 mt-1"
+         data-en="Complete, balanced kibble for kittens, adults and seniors — from the brands vets recommend."
+         data-ar="طعام متكامل ومتوازن للقطط الصغيرة والبالغة وكبيرة السن — من الماركات التي يوصي بها الأطباء البيطريون.">Complete, balanced kibble for kittens, adults and seniors — from the brands vets recommend.</p>
+
+      <!-- Subcategory chips -->
+      <div class="flex gap-2 overflow-x-auto no-scrollbar mt-5 pb-1" data-select-group>
+        <button class="pm-chip is-active shrink-0 border border-gray-200 rounded-full px-4 py-2 text-sm font-bold bg-white" data-en="All" data-ar="الكل">All</button>
+        <button class="pm-chip shrink-0 border border-gray-200 rounded-full px-4 py-2 text-sm font-bold bg-white" data-en="Kitten" data-ar="قطط صغيرة">Kitten</button>
+        <button class="pm-chip shrink-0 border border-gray-200 rounded-full px-4 py-2 text-sm font-bold bg-white" data-en="Adult" data-ar="بالغة">Adult</button>
+        <button class="pm-chip shrink-0 border border-gray-200 rounded-full px-4 py-2 text-sm font-bold bg-white" data-en="Senior" data-ar="كبيرة السن">Senior</button>
+        <button class="pm-chip shrink-0 border border-gray-200 rounded-full px-4 py-2 text-sm font-bold bg-white" data-en="Indoor" data-ar="منزلية">Indoor</button>
+        <button class="pm-chip shrink-0 border border-gray-200 rounded-full px-4 py-2 text-sm font-bold bg-white" data-en="Grain free" data-ar="خالي من الحبوب">Grain free</button>
+        <button class="pm-chip shrink-0 border border-gray-200 rounded-full px-4 py-2 text-sm font-bold bg-white" data-en="Hairball" data-ar="كرات الشعر">Hairball</button>
+      </div>
+
+      <div class="grid lg:grid-cols-[270px,1fr] gap-6 mt-6">
+
+      <aside id="filterPanel" class="hidden lg:block bg-white rounded-2xl border border-gray-100 p-5 h-fit lg:sticky lg:top-32">
+        <div class="flex items-center justify-between mb-2">
+          <h2 class="font-display text-lg font-semibold" data-en="Filters" data-ar="التصفية">Filters</h2>
+          <button class="text-xs font-extrabold text-gray-400 hover:text-brand-coral" data-en="Clear all" data-ar="مسح الكل">Clear all</button>
+        </div>
+
+        <form action="category.html" method="get">
+          
+          <details class="border-b border-gray-100 py-3" open>
+            <summary class="flex items-center justify-between cursor-pointer font-extrabold text-sm list-none">
+              <span data-en="Brand" data-ar="الماركة">Brand</span>
+              <svg class="w-4 h-4 text-gray-400" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" viewBox="0 0 24 24" aria-hidden="true"><path d="m6 9 6 6 6-6"/></svg>
+            </summary>
+            <div class="pt-2 max-h-52 overflow-y-auto"><label class="flex items-center gap-2.5 py-1 text-sm cursor-pointer"><input type="checkbox" name="brand"  class="w-4 h-4 accent-[#14A395]" /><span data-en="Royal Canin" data-ar="رويال كانين">Royal Canin</span> <span class="text-gray-400 pm-ltr">(48)</span></label><label class="flex items-center gap-2.5 py-1 text-sm cursor-pointer"><input type="checkbox" name="brand"  class="w-4 h-4 accent-[#14A395]" /><span data-en="Farmina" data-ar="فارمينا">Farmina</span> <span class="text-gray-400 pm-ltr">(31)</span></label><label class="flex items-center gap-2.5 py-1 text-sm cursor-pointer"><input type="checkbox" name="brand"  class="w-4 h-4 accent-[#14A395]" /><span data-en="Applaws" data-ar="أبلاوز">Applaws</span> <span class="text-gray-400 pm-ltr">(22)</span></label><label class="flex items-center gap-2.5 py-1 text-sm cursor-pointer"><input type="checkbox" name="brand"  class="w-4 h-4 accent-[#14A395]" /><span data-en="Hill's" data-ar="هيلز">Hill's</span> <span class="text-gray-400 pm-ltr">(19)</span></label><label class="flex items-center gap-2.5 py-1 text-sm cursor-pointer"><input type="checkbox" name="brand"  class="w-4 h-4 accent-[#14A395]" /><span data-en="Whiskas" data-ar="ويسكاس">Whiskas</span> <span class="text-gray-400 pm-ltr">(14)</span></label><label class="flex items-center gap-2.5 py-1 text-sm cursor-pointer"><input type="checkbox" name="brand"  class="w-4 h-4 accent-[#14A395]" /><span data-en="Kit Cat" data-ar="كيت كات">Kit Cat</span> <span class="text-gray-400 pm-ltr">(11)</span></label></div>
+          </details>
+
+          
+          <details class="border-b border-gray-100 py-3" open>
+            <summary class="flex items-center justify-between cursor-pointer font-extrabold text-sm list-none">
+              <span data-en="Price (KD)" data-ar="السعر (د.ك)">Price (KD)</span>
+              <svg class="w-4 h-4 text-gray-400" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" viewBox="0 0 24 24" aria-hidden="true"><path d="m6 9 6 6 6-6"/></svg>
+            </summary>
+            <div class="pt-2 max-h-52 overflow-y-auto"><div class="flex items-center gap-2 pt-1"><input type="number" name="minPrice" value="0" min="0" step="0.5" aria-label="Minimum price" class="pm-input w-full rounded-xl border border-gray-200 px-3 py-2 text-sm pm-ltr" /><span class="text-gray-400">—</span><input type="number" name="maxPrice" value="40" min="0" step="0.5" aria-label="Maximum price" class="pm-input w-full rounded-xl border border-gray-200 px-3 py-2 text-sm pm-ltr" /></div></div>
+          </details>
+
+          
+          <details class="border-b border-gray-100 py-3" >
+            <summary class="flex items-center justify-between cursor-pointer font-extrabold text-sm list-none">
+              <span data-en="Life stage" data-ar="المرحلة العمرية">Life stage</span>
+              <svg class="w-4 h-4 text-gray-400" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" viewBox="0 0 24 24" aria-hidden="true"><path d="m6 9 6 6 6-6"/></svg>
+            </summary>
+            <div class="pt-2 max-h-52 overflow-y-auto"><label class="flex items-center gap-2.5 py-1 text-sm cursor-pointer"><input type="checkbox" name="stage"  class="w-4 h-4 accent-[#14A395]" /><span data-en="Kitten" data-ar="قطط صغيرة">Kitten</span> </label><label class="flex items-center gap-2.5 py-1 text-sm cursor-pointer"><input type="checkbox" name="stage"  class="w-4 h-4 accent-[#14A395]" /><span data-en="Adult" data-ar="بالغة">Adult</span> </label><label class="flex items-center gap-2.5 py-1 text-sm cursor-pointer"><input type="checkbox" name="stage"  class="w-4 h-4 accent-[#14A395]" /><span data-en="Senior" data-ar="كبيرة السن">Senior</span> </label></div>
+          </details>
+
+          
+          <details class="border-b border-gray-100 py-3" >
+            <summary class="flex items-center justify-between cursor-pointer font-extrabold text-sm list-none">
+              <span data-en="Special diet" data-ar="نظام غذائي خاص">Special diet</span>
+              <svg class="w-4 h-4 text-gray-400" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" viewBox="0 0 24 24" aria-hidden="true"><path d="m6 9 6 6 6-6"/></svg>
+            </summary>
+            <div class="pt-2 max-h-52 overflow-y-auto"><label class="flex items-center gap-2.5 py-1 text-sm cursor-pointer"><input type="checkbox" name="diet"  class="w-4 h-4 accent-[#14A395]" /><span data-en="Grain free" data-ar="خالي من الحبوب">Grain free</span> </label><label class="flex items-center gap-2.5 py-1 text-sm cursor-pointer"><input type="checkbox" name="diet"  class="w-4 h-4 accent-[#14A395]" /><span data-en="Sensitive stomach" data-ar="معدة حساسة">Sensitive stomach</span> </label><label class="flex items-center gap-2.5 py-1 text-sm cursor-pointer"><input type="checkbox" name="diet"  class="w-4 h-4 accent-[#14A395]" /><span data-en="Weight control" data-ar="التحكم بالوزن">Weight control</span> </label><label class="flex items-center gap-2.5 py-1 text-sm cursor-pointer"><input type="checkbox" name="diet"  class="w-4 h-4 accent-[#14A395]" /><span data-en="Hairball control" data-ar="التحكم بكرات الشعر">Hairball control</span> </label></div>
+          </details>
+
+          <div class="py-3">
+            <label class="flex items-center gap-2.5 py-1 text-sm cursor-pointer"><input type="checkbox" name="inStock" checked class="w-4 h-4 accent-[#14A395]" /><span data-en="In stock only" data-ar="المتوفر فقط">In stock only</span> </label>
+            <label class="flex items-center gap-2.5 py-1 text-sm cursor-pointer"><input type="checkbox" name="onOffer"  class="w-4 h-4 accent-[#14A395]" /><span data-en="On offer" data-ar="عليه عرض">On offer</span> </label>
+          </div>
+
+          <button type="submit" class="w-full bg-brand-teal hover:bg-brand-tealdark text-white font-extrabold py-3 rounded-full transition"
+                  data-en="Apply filters" data-ar="تطبيق الفلاتر">Apply filters</button>
+        </form>
+      </aside>
+
+        <div>
+          <!-- Toolbar -->
+          <div class="flex flex-wrap items-center justify-between gap-3 mb-4">
+            <div class="flex items-center gap-3">
+              <button id="filterToggle" class="lg:hidden flex items-center gap-2 bg-white border border-gray-200 rounded-full px-4 py-2 text-sm font-extrabold">
+                <svg class="w-4 h-4" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" viewBox="0 0 24 24" aria-hidden="true"><path d="M3 5h18M7 12h10M10 19h4"/></svg><span data-en="Filters" data-ar="التصفية">Filters</span>
+              </button>
+              <span class="text-sm text-gray-500"><strong class="text-brand-navy pm-ltr">146</strong> <span data-en="products" data-ar="منتج">products</span></span>
+            </div>
+            <label class="flex items-center gap-2 text-sm">
+              <span class="pm-sr-only" data-en="Sort by" data-ar="ترتيب حسب">Sort by</span>
+              <select class="pm-select bg-white border border-gray-200 rounded-full ps-4 py-2 text-sm font-bold">
+                <option data-en="Most popular" data-ar="الأكثر شعبية">Most popular</option>
+                <option data-en="Newest first" data-ar="الأحدث أولاً">Newest first</option>
+                <option data-en="Price: low to high" data-ar="السعر: من الأقل للأعلى">Price: low to high</option>
+                <option data-en="Price: high to low" data-ar="السعر: من الأعلى للأقل">Price: high to low</option>
+                <option data-en="Highest rated" data-ar="الأعلى تقييماً">Highest rated</option>
+              </select>
+            </label>
+          </div>
+
+          <!-- Active filters -->
+          <div class="flex flex-wrap items-center gap-2 mb-4">
+            <span class="flex items-center gap-1.5 bg-brand-teal text-white text-xs font-bold rounded-full px-3 py-1.5">Royal Canin <svg class="w-3 h-3" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" viewBox="0 0 24 24" aria-hidden="true"><path d="M18 6 6 18M6 6l12 12"/></svg></span>
+            <span class="flex items-center gap-1.5 bg-brand-teal text-white text-xs font-bold rounded-full px-3 py-1.5"><span data-en="Grain free" data-ar="خالي من الحبوب">Grain free</span> <svg class="w-3 h-3" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" viewBox="0 0 24 24" aria-hidden="true"><path d="M18 6 6 18M6 6l12 12"/></svg></span>
+            <button class="text-xs font-extrabold text-gray-400 hover:text-brand-coral" data-en="Clear all" data-ar="مسح الكل">Clear all</button>
+          </div>
+
+          <!-- Grid -->
+          <div class="grid grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-4">
+
+        <!-- REPEATABLE: product card -->
+        <article class="pm-product-card w-full shrink-0 bg-white rounded-2xl border border-gray-100 overflow-hidden flex flex-col hover:shadow-lg transition"
+                 data-product-id="3001">
+          <div class="relative">
+            <a href="product.html" class="block aspect-square overflow-hidden bg-gray-50">
+              <img src="images/products/cat-dry-food.jpg" alt="Royal Canin Indoor Adult Cat Dry Food" class="pm-product-img w-full h-full object-cover" loading="lazy" width="800" height="800" />
+            </a>
+            <div class="absolute top-3 start-3 flex flex-col gap-1 items-start"><span class="bg-brand-coral text-white text-[11px] font-extrabold px-2 py-1 rounded-full" class="pm-ltr">-20%</span></div>
+            <button data-wishlist aria-label="Add to wishlist" aria-pressed="false"
+                    class="absolute top-3 end-3 w-9 h-9 rounded-full bg-white/90 grid place-items-center text-gray-500 hover:text-brand-coral transition">
+              <svg class="w-4 h-4" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" viewBox="0 0 24 24" aria-hidden="true"><path d="M20.8 4.6a5.5 5.5 0 0 0-7.8 0L12 5.7l-1-1.1a5.5 5.5 0 0 0-7.8 7.8l1.1 1L12 21l7.7-7.7 1.1-1a5.5 5.5 0 0 0 0-7.7z"/></svg>
+            </button>
+          </div>
+
+          <div class="p-3.5 flex flex-col grow">
+            <p class="text-[11px] font-extrabold tracking-wide text-gray-400 uppercase">Royal Canin</p>
+            <h3 class="pm-product-name text-sm font-bold mt-1">
+              <a href="product.html" class="hover:text-brand-tealdark" data-en="Royal Canin Indoor Adult Cat Dry Food" data-ar="رويال كانين طعام جاف للقطط المنزلية">Royal Canin Indoor Adult Cat Dry Food</a>
+            </h3>
+            <div class="flex items-center gap-1 mt-1.5 text-brand-gold">
+              <svg class="w-3.5 h-3.5" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true"><path d="m12 2 3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg><span class="text-xs font-bold text-brand-navy pm-ltr">4.8</span>
+              <span class="text-[11px] text-gray-400 pm-ltr">(214)</span>
+            </div>
+            <p class="text-[11px] text-gray-400 mt-0.5" data-en="2 kg · 4 kg · 10 kg" data-ar="2 كجم · 4 كجم · 10 كجم">2 kg · 4 kg · 10 kg</p>
+            <div class="flex items-end justify-between gap-2 mt-auto pt-3">
+              <div class="flex items-baseline gap-1.5">
+                <span class="text-[11px] font-bold text-gray-400">KD</span>
+                <span class="pm-price font-display text-lg font-semibold pm-ltr">8.750</span>
+                <span class="pm-price-old text-xs text-gray-400 line-through pm-ltr">10.900</span>
+              </div>
+              <button data-add-to-cart data-product-id="3001" aria-label="Add to cart" class="w-10 h-10 shrink-0 rounded-full bg-brand-teal text-white grid place-items-center shadow-sm hover:bg-brand-coral active:scale-95 transition"><svg class="w-5 h-5" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 5v14M5 12h14"/></svg></button>
+            </div>
+          </div>
+        </article>
+        <!-- REPEATABLE: product card -->
+        <article class="pm-product-card w-full shrink-0 bg-white rounded-2xl border border-gray-100 overflow-hidden flex flex-col hover:shadow-lg transition"
+                 data-product-id="3002">
+          <div class="relative">
+            <a href="product.html" class="block aspect-square overflow-hidden bg-gray-50">
+              <img src="images/products/cat-wet-food.jpg" alt="N&amp;D Grain Free Chicken &amp; Pomegranate" class="pm-product-img w-full h-full object-cover" loading="lazy" width="800" height="800" />
+            </a>
+            <div class="absolute top-3 start-3 flex flex-col gap-1 items-start"><span class="bg-brand-navy text-white text-[11px] font-extrabold px-2 py-1 rounded-full" data-en="Subscribe &amp; Save" data-ar="اشترك ووفّر">Subscribe &amp; Save</span></div>
+            <button data-wishlist aria-label="Add to wishlist" aria-pressed="false"
+                    class="absolute top-3 end-3 w-9 h-9 rounded-full bg-white/90 grid place-items-center text-gray-500 hover:text-brand-coral transition">
+              <svg class="w-4 h-4" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" viewBox="0 0 24 24" aria-hidden="true"><path d="M20.8 4.6a5.5 5.5 0 0 0-7.8 0L12 5.7l-1-1.1a5.5 5.5 0 0 0-7.8 7.8l1.1 1L12 21l7.7-7.7 1.1-1a5.5 5.5 0 0 0 0-7.7z"/></svg>
+            </button>
+          </div>
+
+          <div class="p-3.5 flex flex-col grow">
+            <p class="text-[11px] font-extrabold tracking-wide text-gray-400 uppercase">Farmina</p>
+            <h3 class="pm-product-name text-sm font-bold mt-1">
+              <a href="product.html" class="hover:text-brand-tealdark" data-en="N&amp;D Grain Free Chicken &amp; Pomegranate" data-ar="إن آند دي خالي من الحبوب بالدجاج والرمان">N&amp;D Grain Free Chicken &amp; Pomegranate</a>
+            </h3>
+            <div class="flex items-center gap-1 mt-1.5 text-brand-gold">
+              <svg class="w-3.5 h-3.5" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true"><path d="m12 2 3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg><span class="text-xs font-bold text-brand-navy pm-ltr">4.7</span>
+              <span class="text-[11px] text-gray-400 pm-ltr">(92)</span>
+            </div>
+            <p class="text-[11px] text-gray-400 mt-0.5" data-en="1.5 kg · 5 kg" data-ar="1.5 كجم · 5 كجم">1.5 kg · 5 kg</p>
+            <div class="flex items-end justify-between gap-2 mt-auto pt-3">
+              <div class="flex items-baseline gap-1.5">
+                <span class="text-[11px] font-bold text-gray-400">KD</span>
+                <span class="pm-price font-display text-lg font-semibold pm-ltr">12.400</span>
+                
+              </div>
+              <button data-add-to-cart data-product-id="3002" aria-label="Add to cart" class="w-10 h-10 shrink-0 rounded-full bg-brand-teal text-white grid place-items-center shadow-sm hover:bg-brand-coral active:scale-95 transition"><svg class="w-5 h-5" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 5v14M5 12h14"/></svg></button>
+            </div>
+          </div>
+        </article>
+        <!-- REPEATABLE: product card -->
+        <article class="pm-product-card w-full shrink-0 bg-white rounded-2xl border border-gray-100 overflow-hidden flex flex-col hover:shadow-lg transition"
+                 data-product-id="3003">
+          <div class="relative">
+            <a href="product.html" class="block aspect-square overflow-hidden bg-gray-50">
+              <img src="images/blog/kitten-guide.jpg" alt="New Kitten Starter Kit — Food, Litter &amp; Toy" class="pm-product-img w-full h-full object-cover" loading="lazy" width="800" height="800" />
+            </a>
+            <div class="absolute top-3 start-3 flex flex-col gap-1 items-start"><span class="bg-brand-gold text-white text-[11px] font-extrabold px-2 py-1 rounded-full" data-en="Bundle" data-ar="باقة">Bundle</span></div>
+            <button data-wishlist aria-label="Add to wishlist" aria-pressed="false"
+                    class="absolute top-3 end-3 w-9 h-9 rounded-full bg-white/90 grid place-items-center text-gray-500 hover:text-brand-coral transition">
+              <svg class="w-4 h-4" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" viewBox="0 0 24 24" aria-hidden="true"><path d="M20.8 4.6a5.5 5.5 0 0 0-7.8 0L12 5.7l-1-1.1a5.5 5.5 0 0 0-7.8 7.8l1.1 1L12 21l7.7-7.7 1.1-1a5.5 5.5 0 0 0 0-7.7z"/></svg>
+            </button>
+          </div>
+
+          <div class="p-3.5 flex flex-col grow">
+            <p class="text-[11px] font-extrabold tracking-wide text-gray-400 uppercase">PetMami</p>
+            <h3 class="pm-product-name text-sm font-bold mt-1">
+              <a href="product.html" class="hover:text-brand-tealdark" data-en="New Kitten Starter Kit — Food, Litter &amp; Toy" data-ar="طقم بداية للقطط الصغيرة — طعام ورمل ولعبة">New Kitten Starter Kit — Food, Litter &amp; Toy</a>
+            </h3>
+            <div class="flex items-center gap-1 mt-1.5 text-brand-gold">
+              <svg class="w-3.5 h-3.5" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true"><path d="m12 2 3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg><span class="text-xs font-bold text-brand-navy pm-ltr">4.9</span>
+              <span class="text-[11px] text-gray-400 pm-ltr">(57)</span>
+            </div>
+            <p class="text-[11px] text-gray-400 mt-0.5" data-en="Saves 15%" data-ar="يوفر 15%">Saves 15%</p>
+            <div class="flex items-end justify-between gap-2 mt-auto pt-3">
+              <div class="flex items-baseline gap-1.5">
+                <span class="text-[11px] font-bold text-gray-400">KD</span>
+                <span class="pm-price font-display text-lg font-semibold pm-ltr">14.900</span>
+                <span class="pm-price-old text-xs text-gray-400 line-through pm-ltr">17.500</span>
+              </div>
+              <button data-add-to-cart data-product-id="3003" aria-label="Add to cart" class="w-10 h-10 shrink-0 rounded-full bg-brand-teal text-white grid place-items-center shadow-sm hover:bg-brand-coral active:scale-95 transition"><svg class="w-5 h-5" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 5v14M5 12h14"/></svg></button>
+            </div>
+          </div>
+        </article>
+        <!-- REPEATABLE: product card -->
+        <article class="pm-product-card w-full shrink-0 bg-white rounded-2xl border border-gray-100 overflow-hidden flex flex-col hover:shadow-lg transition"
+                 data-product-id="3004">
+          <div class="relative">
+            <a href="product.html" class="block aspect-square overflow-hidden bg-gray-50">
+              <img src="images/products/cat-litter.jpg" alt="Fast Acting Clumping Cat Litter 10 L" class="pm-product-img w-full h-full object-cover" loading="lazy" width="800" height="800" />
+            </a>
+            <div class="absolute top-3 start-3 flex flex-col gap-1 items-start"></div>
+            <button data-wishlist aria-label="Add to wishlist" aria-pressed="false"
+                    class="absolute top-3 end-3 w-9 h-9 rounded-full bg-white/90 grid place-items-center text-gray-500 hover:text-brand-coral transition">
+              <svg class="w-4 h-4" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" viewBox="0 0 24 24" aria-hidden="true"><path d="M20.8 4.6a5.5 5.5 0 0 0-7.8 0L12 5.7l-1-1.1a5.5 5.5 0 0 0-7.8 7.8l1.1 1L12 21l7.7-7.7 1.1-1a5.5 5.5 0 0 0 0-7.7z"/></svg>
+            </button>
+          </div>
+
+          <div class="p-3.5 flex flex-col grow">
+            <p class="text-[11px] font-extrabold tracking-wide text-gray-400 uppercase">Ever Clean</p>
+            <h3 class="pm-product-name text-sm font-bold mt-1">
+              <a href="product.html" class="hover:text-brand-tealdark" data-en="Fast Acting Clumping Cat Litter 10 L" data-ar="رمل متكتل سريع المفعول 10 لتر">Fast Acting Clumping Cat Litter 10 L</a>
+            </h3>
+            <div class="flex items-center gap-1 mt-1.5 text-brand-gold">
+              <svg class="w-3.5 h-3.5" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true"><path d="m12 2 3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg><span class="text-xs font-bold text-brand-navy pm-ltr">4.6</span>
+              <span class="text-[11px] text-gray-400 pm-ltr">(96)</span>
+            </div>
+            <p class="text-[11px] text-gray-400 mt-0.5" data-en="6 L · 10 L" data-ar="6 لتر · 10 لتر">6 L · 10 L</p>
+            <div class="flex items-end justify-between gap-2 mt-auto pt-3">
+              <div class="flex items-baseline gap-1.5">
+                <span class="text-[11px] font-bold text-gray-400">KD</span>
+                <span class="pm-price font-display text-lg font-semibold pm-ltr">4.500</span>
+                
+              </div>
+              <button data-add-to-cart data-product-id="3004" aria-label="Add to cart" class="w-10 h-10 shrink-0 rounded-full bg-brand-teal text-white grid place-items-center shadow-sm hover:bg-brand-coral active:scale-95 transition"><svg class="w-5 h-5" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 5v14M5 12h14"/></svg></button>
+            </div>
+          </div>
+        </article>
+        <!-- REPEATABLE: product card -->
+        <article class="pm-product-card w-full shrink-0 bg-white rounded-2xl border border-gray-100 overflow-hidden flex flex-col hover:shadow-lg transition"
+                 data-product-id="3005">
+          <div class="relative">
+            <a href="product.html" class="block aspect-square overflow-hidden bg-gray-50">
+              <img src="images/products/cat-toy.jpg" alt="Interactive Treat Ball for Cats" class="pm-product-img w-full h-full object-cover" loading="lazy" width="800" height="800" />
+            </a>
+            <div class="absolute top-3 start-3 flex flex-col gap-1 items-start"><span class="bg-brand-gold text-white text-[11px] font-extrabold px-2 py-1 rounded-full" data-en="Best seller" data-ar="الأكثر مبيعاً">Best seller</span></div>
+            <button data-wishlist aria-label="Add to wishlist" aria-pressed="false"
+                    class="absolute top-3 end-3 w-9 h-9 rounded-full bg-white/90 grid place-items-center text-gray-500 hover:text-brand-coral transition">
+              <svg class="w-4 h-4" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" viewBox="0 0 24 24" aria-hidden="true"><path d="M20.8 4.6a5.5 5.5 0 0 0-7.8 0L12 5.7l-1-1.1a5.5 5.5 0 0 0-7.8 7.8l1.1 1L12 21l7.7-7.7 1.1-1a5.5 5.5 0 0 0 0-7.7z"/></svg>
+            </button>
+          </div>
+
+          <div class="p-3.5 flex flex-col grow">
+            <p class="text-[11px] font-extrabold tracking-wide text-gray-400 uppercase">PetMami</p>
+            <h3 class="pm-product-name text-sm font-bold mt-1">
+              <a href="product.html" class="hover:text-brand-tealdark" data-en="Interactive Treat Ball for Cats" data-ar="كرة المكافآت التفاعلية للقطط">Interactive Treat Ball for Cats</a>
+            </h3>
+            <div class="flex items-center gap-1 mt-1.5 text-brand-gold">
+              <svg class="w-3.5 h-3.5" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true"><path d="m12 2 3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg><span class="text-xs font-bold text-brand-navy pm-ltr">4.4</span>
+              <span class="text-[11px] text-gray-400 pm-ltr">(41)</span>
+            </div>
+            <p class="text-[11px] text-gray-400 mt-0.5" data-en="3 colours" data-ar="3 ألوان">3 colours</p>
+            <div class="flex items-end justify-between gap-2 mt-auto pt-3">
+              <div class="flex items-baseline gap-1.5">
+                <span class="text-[11px] font-bold text-gray-400">KD</span>
+                <span class="pm-price font-display text-lg font-semibold pm-ltr">1.900</span>
+                
+              </div>
+              <button data-add-to-cart data-product-id="3005" aria-label="Add to cart" class="w-10 h-10 shrink-0 rounded-full bg-brand-teal text-white grid place-items-center shadow-sm hover:bg-brand-coral active:scale-95 transition"><svg class="w-5 h-5" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 5v14M5 12h14"/></svg></button>
+            </div>
+          </div>
+        </article>
+        <!-- REPEATABLE: product card -->
+        <article class="pm-product-card w-full shrink-0 bg-white rounded-2xl border border-gray-100 overflow-hidden flex flex-col hover:shadow-lg transition"
+                 data-product-id="3006">
+          <div class="relative">
+            <a href="product.html" class="block aspect-square overflow-hidden bg-gray-50">
+              <img src="images/products/cat-tree.jpg" alt="Multi-Level Cat Tree with Scratching Posts" class="pm-product-img w-full h-full object-cover" loading="lazy" width="800" height="800" />
+            </a>
+            <div class="absolute top-3 start-3 flex flex-col gap-1 items-start"><span class="bg-gray-400 text-white text-[11px] font-extrabold px-2 py-1 rounded-full" data-en="Out of stock" data-ar="غير متوفر">Out of stock</span></div>
+            <button data-wishlist aria-label="Add to wishlist" aria-pressed="false"
+                    class="absolute top-3 end-3 w-9 h-9 rounded-full bg-white/90 grid place-items-center text-gray-500 hover:text-brand-coral transition">
+              <svg class="w-4 h-4" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" viewBox="0 0 24 24" aria-hidden="true"><path d="M20.8 4.6a5.5 5.5 0 0 0-7.8 0L12 5.7l-1-1.1a5.5 5.5 0 0 0-7.8 7.8l1.1 1L12 21l7.7-7.7 1.1-1a5.5 5.5 0 0 0 0-7.7z"/></svg>
+            </button>
+          </div>
+
+          <div class="p-3.5 flex flex-col grow">
+            <p class="text-[11px] font-extrabold tracking-wide text-gray-400 uppercase">PetMami</p>
+            <h3 class="pm-product-name text-sm font-bold mt-1">
+              <a href="product.html" class="hover:text-brand-tealdark" data-en="Multi-Level Cat Tree with Scratching Posts" data-ar="شجرة قطط متعددة المستويات">Multi-Level Cat Tree with Scratching Posts</a>
+            </h3>
+            <div class="flex items-center gap-1 mt-1.5 text-brand-gold">
+              <svg class="w-3.5 h-3.5" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true"><path d="m12 2 3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg><span class="text-xs font-bold text-brand-navy pm-ltr">4.5</span>
+              <span class="text-[11px] text-gray-400 pm-ltr">(74)</span>
+            </div>
+            <p class="text-[11px] text-gray-400 mt-0.5" data-en="2 sizes" data-ar="حجمان">2 sizes</p>
+            <div class="flex items-end justify-between gap-2 mt-auto pt-3">
+              <div class="flex items-baseline gap-1.5">
+                <span class="text-[11px] font-bold text-gray-400">KD</span>
+                <span class="pm-price font-display text-lg font-semibold pm-ltr">24.900</span>
+                
+              </div>
+              <button class="text-[11px] font-extrabold text-brand-tealdark border border-brand-teal rounded-full px-3 py-2 hover:bg-brand-teal hover:text-white transition" data-en="Notify me" data-ar="أبلغني">Notify me</button>
+            </div>
+          </div>
+        </article>
+        <!-- REPEATABLE: product card -->
+        <article class="pm-product-card w-full shrink-0 bg-white rounded-2xl border border-gray-100 overflow-hidden flex flex-col hover:shadow-lg transition"
+                 data-product-id="3007">
+          <div class="relative">
+            <a href="product.html" class="block aspect-square overflow-hidden bg-gray-50">
+              <img src="images/products/cat-collar.jpg" alt="Safety Cat Collar with Bell &amp; ID Tag" class="pm-product-img w-full h-full object-cover" loading="lazy" width="800" height="800" />
+            </a>
+            <div class="absolute top-3 start-3 flex flex-col gap-1 items-start"></div>
+            <button data-wishlist aria-label="Add to wishlist" aria-pressed="false"
+                    class="absolute top-3 end-3 w-9 h-9 rounded-full bg-white/90 grid place-items-center text-gray-500 hover:text-brand-coral transition">
+              <svg class="w-4 h-4" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" viewBox="0 0 24 24" aria-hidden="true"><path d="M20.8 4.6a5.5 5.5 0 0 0-7.8 0L12 5.7l-1-1.1a5.5 5.5 0 0 0-7.8 7.8l1.1 1L12 21l7.7-7.7 1.1-1a5.5 5.5 0 0 0 0-7.7z"/></svg>
+            </button>
+          </div>
+
+          <div class="p-3.5 flex flex-col grow">
+            <p class="text-[11px] font-extrabold tracking-wide text-gray-400 uppercase">PetMami</p>
+            <h3 class="pm-product-name text-sm font-bold mt-1">
+              <a href="product.html" class="hover:text-brand-tealdark" data-en="Safety Cat Collar with Bell &amp; ID Tag" data-ar="طوق أمان للقطط مع جرس">Safety Cat Collar with Bell &amp; ID Tag</a>
+            </h3>
+            <div class="flex items-center gap-1 mt-1.5 text-brand-gold">
+              <svg class="w-3.5 h-3.5" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true"><path d="m12 2 3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg><span class="text-xs font-bold text-brand-navy pm-ltr">4.4</span>
+              <span class="text-[11px] text-gray-400 pm-ltr">(35)</span>
+            </div>
+            <p class="text-[11px] text-gray-400 mt-0.5" data-en="4 colours" data-ar="4 ألوان">4 colours</p>
+            <div class="flex items-end justify-between gap-2 mt-auto pt-3">
+              <div class="flex items-baseline gap-1.5">
+                <span class="text-[11px] font-bold text-gray-400">KD</span>
+                <span class="pm-price font-display text-lg font-semibold pm-ltr">1.500</span>
+                
+              </div>
+              <button data-add-to-cart data-product-id="3007" aria-label="Add to cart" class="w-10 h-10 shrink-0 rounded-full bg-brand-teal text-white grid place-items-center shadow-sm hover:bg-brand-coral active:scale-95 transition"><svg class="w-5 h-5" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 5v14M5 12h14"/></svg></button>
+            </div>
+          </div>
+        </article>
+        <!-- REPEATABLE: product card -->
+        <article class="pm-product-card w-full shrink-0 bg-white rounded-2xl border border-gray-100 overflow-hidden flex flex-col hover:shadow-lg transition"
+                 data-product-id="3008">
+          <div class="relative">
+            <a href="product.html" class="block aspect-square overflow-hidden bg-gray-50">
+              <img src="images/products/pet-carrier.jpg" alt="Travel Carrier for Cats &amp; Small Dogs" class="pm-product-img w-full h-full object-cover" loading="lazy" width="800" height="800" />
+            </a>
+            <div class="absolute top-3 start-3 flex flex-col gap-1 items-start"></div>
+            <button data-wishlist aria-label="Add to wishlist" aria-pressed="false"
+                    class="absolute top-3 end-3 w-9 h-9 rounded-full bg-white/90 grid place-items-center text-gray-500 hover:text-brand-coral transition">
+              <svg class="w-4 h-4" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" viewBox="0 0 24 24" aria-hidden="true"><path d="M20.8 4.6a5.5 5.5 0 0 0-7.8 0L12 5.7l-1-1.1a5.5 5.5 0 0 0-7.8 7.8l1.1 1L12 21l7.7-7.7 1.1-1a5.5 5.5 0 0 0 0-7.7z"/></svg>
+            </button>
+          </div>
+
+          <div class="p-3.5 flex flex-col grow">
+            <p class="text-[11px] font-extrabold tracking-wide text-gray-400 uppercase">Trixie</p>
+            <h3 class="pm-product-name text-sm font-bold mt-1">
+              <a href="product.html" class="hover:text-brand-tealdark" data-en="Travel Carrier for Cats &amp; Small Dogs" data-ar="حقيبة سفر للقطط والكلاب الصغيرة">Travel Carrier for Cats &amp; Small Dogs</a>
+            </h3>
+            <div class="flex items-center gap-1 mt-1.5 text-brand-gold">
+              <svg class="w-3.5 h-3.5" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true"><path d="m12 2 3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg><span class="text-xs font-bold text-brand-navy pm-ltr">4.5</span>
+              <span class="text-[11px] text-gray-400 pm-ltr">(63)</span>
+            </div>
+            <p class="text-[11px] text-gray-400 mt-0.5" data-en="S · M · L" data-ar="صغير · وسط · كبير">S · M · L</p>
+            <div class="flex items-end justify-between gap-2 mt-auto pt-3">
+              <div class="flex items-baseline gap-1.5">
+                <span class="text-[11px] font-bold text-gray-400">KD</span>
+                <span class="pm-price font-display text-lg font-semibold pm-ltr">11.500</span>
+                
+              </div>
+              <button data-add-to-cart data-product-id="3008" aria-label="Add to cart" class="w-10 h-10 shrink-0 rounded-full bg-brand-teal text-white grid place-items-center shadow-sm hover:bg-brand-coral active:scale-95 transition"><svg class="w-5 h-5" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 5v14M5 12h14"/></svg></button>
+            </div>
+          </div>
+        </article>
+          </div>
+
+          <!-- Pagination -->
+          <nav class="flex justify-center gap-1.5 mt-8" aria-label="Pagination">
+            <a href="#" class="w-10 h-10 grid place-items-center rounded-xl border border-gray-200 bg-white hover:border-brand-teal" aria-label="Previous"><svg class="w-4 h-4 pm-flip" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" viewBox="0 0 24 24" aria-hidden="true"><path d="m15 18-6-6 6-6"/></svg></a>
+            <span class="w-10 h-10 grid place-items-center rounded-xl bg-brand-teal text-white font-extrabold" aria-current="page">1</span>
+            <a href="#" class="w-10 h-10 grid place-items-center rounded-xl border border-gray-200 bg-white font-bold hover:border-brand-teal">2</a>
+            <a href="#" class="w-10 h-10 grid place-items-center rounded-xl border border-gray-200 bg-white font-bold hover:border-brand-teal">3</a>
+            <span class="w-10 h-10 grid place-items-center text-gray-400">…</span>
+            <a href="#" class="w-10 h-10 grid place-items-center rounded-xl border border-gray-200 bg-white font-bold hover:border-brand-teal">19</a>
+            <a href="#" class="w-10 h-10 grid place-items-center rounded-xl border border-gray-200 bg-white hover:border-brand-teal" aria-label="Next"><svg class="w-4 h-4 pm-flip" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" viewBox="0 0 24 24" aria-hidden="true"><path d="m9 18 6-6-6-6"/></svg></a>
+          </nav>
+        </div>
+      </div>
+
+      <!-- SEO copy -->
+      <section class="max-w-3xl mt-12">
+        <h2 class="font-display text-xl font-semibold" data-en="Buying cat dry food in Kuwait" data-ar="شراء طعام القطط الجاف في الكويت">Buying cat dry food in Kuwait</h2>
+        <p class="text-sm text-gray-600 mt-3"
+           data-en="Dry food keeps well in Kuwait's climate, is easy to portion and helps maintain dental health. Choose a formula that matches your cat's life stage and lifestyle — indoor cats need fewer calories and more fibre, while kittens need higher protein for growth."
+           data-ar="يحافظ الطعام الجاف على جودته في مناخ الكويت، ويسهل تقسيمه ويساعد على صحة الأسنان. اختر تركيبة تناسب عمر قطتك ونمط حياتها — القطط المنزلية تحتاج سعرات أقل وألياف أكثر، بينما تحتاج القطط الصغيرة بروتيناً أعلى للنمو.">Dry food keeps well in Kuwait's climate, is easy to portion and helps maintain dental health.</p>
+        <p class="text-sm text-gray-600 mt-3"
+           data-en="All PetMami food is sourced from authorised distributors, stored in a temperature-controlled warehouse and delivered the same day when you order before 6 PM."
+           data-ar="جميع أطعمة بت مامي من موزعين معتمدين، وتُخزن في مستودع مكيّف، وتُوصل في نفس اليوم عند الطلب قبل 6 مساءً.">All PetMami food is sourced from authorised distributors, stored in a temperature-controlled warehouse and delivered the same day when you order before 6 PM.</p>
+      </section>
+    </div>
+  </main>
+
+  <!-- ============================================================
+       PARTIAL: _Footer  →  Views/Shared/_Footer.cshtml
+  ============================================================ -->
+  <footer class="pm-footer bg-brand-navy text-white/80 mt-16">
+    <div class="max-w-7xl mx-auto px-4 py-12 grid gap-8 sm:grid-cols-2 lg:grid-cols-4">
+
+      <div>
+        <img src="images/brand/logo.jpg" alt="PetMami" class="h-14 w-auto bg-white rounded-xl p-1" />
+        <p class="text-sm mt-4 leading-relaxed"
+           data-en="PetMami is Kuwait's friendly online pet store — premium food, toys and care essentials for cats and dogs, delivered to your door."
+           data-ar="بت مامي هو متجرك الإلكتروني الودود في الكويت — طعام فاخر وألعاب ومستلزمات العناية للقطط والكلاب، يصلك إلى باب منزلك.">PetMami is Kuwait's friendly online pet store — premium food, toys and care essentials for cats and dogs, delivered to your door.</p>
+        <div class="flex gap-2 mt-4">
+          <a href="#" class="w-9 h-9 rounded-full bg-white/10 grid place-items-center hover:bg-brand-teal transition" aria-label="Instagram"><svg class="w-4 h-4" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" viewBox="0 0 24 24" aria-hidden="true"><rect x="2" y="2" width="20" height="20" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r="1"/></svg></a>
+          <a href="#" class="w-9 h-9 rounded-full bg-white/10 grid place-items-center hover:bg-brand-teal transition" aria-label="TikTok"><svg class="w-4 h-4" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" viewBox="0 0 24 24" aria-hidden="true"><path d="M15 3v10.5a3.5 3.5 0 1 1-3-3.46"/><path d="M15 3c.5 2.5 2 4 4.5 4.2"/></svg></a>
+          <a href="#" class="w-9 h-9 rounded-full bg-white/10 grid place-items-center hover:bg-brand-teal transition" aria-label="Snapchat"><svg class="w-4 h-4" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 3c2.5 0 4 1.8 4 4.2 0 1.6-.2 2.4.3 2.8.4.3 1 .1 1.4.4.5.4-.2 1.4-1.5 1.9.5 1.6 2 3 3.3 3.3.4.1.5.5.1.8-.8.5-2 .6-2.4 1-.3.3-.2 1-.8 1-.7 0-1.4-.4-2.4-.4s-1.7.4-2.4.4c-.6 0-.5-.7-.8-1-.4-.4-1.6-.5-2.4-1-.4-.3-.3-.7.1-.8 1.3-.3 2.8-1.7 3.3-3.3-1.3-.5-2-1.5-1.5-1.9.4-.3 1-.1 1.4-.4.5-.4.3-1.2.3-2.8C8 4.8 9.5 3 12 3z"/></svg></a>
+          <a href="#" class="w-9 h-9 rounded-full bg-white/10 grid place-items-center hover:bg-brand-teal transition" aria-label="WhatsApp"><svg class="w-4 h-4" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" viewBox="0 0 24 24" aria-hidden="true"><path d="M21 11.5a8.4 8.4 0 0 1-12.6 7.3L3 20.5l1.8-5.3A8.4 8.4 0 1 1 21 11.5z"/><path d="M8.6 9.2c.2 1.6 1.1 3 2.4 4 .8.6 1.7 1 2.7 1.2.4.1.8-.1 1-.4l.4-.6c.2-.3.1-.6-.2-.8l-1.2-.7c-.3-.2-.6-.1-.8.1l-.3.4a5.3 5.3 0 0 1-2.2-2.2l.4-.3c.3-.2.3-.5.2-.8l-.7-1.2c-.2-.3-.5-.4-.8-.2l-.6.4c-.3.2-.4.6-.4 1z"/></svg></a>
+        </div>
+      </div>
+
+      <div>
+        <h4 class="text-white font-display font-semibold mb-4" data-en="Shop" data-ar="التسوق">Shop</h4>
+        <ul class="space-y-2 text-sm">
+          <li><a href="category.html" class="hover:text-brand-gold" data-en="Cats" data-ar="القطط">Cats</a></li>
+          <li><a href="category.html" class="hover:text-brand-gold" data-en="Dogs" data-ar="الكلاب">Dogs</a></li>
+          <!-- PHASE 2 · SERVICES + PET TYPES — delete this comment marker and the one below to re-enable
+          <li><a href="category.html" class="hover:text-brand-gold" data-en="Birds" data-ar="الطيور">Birds</a></li>
+          <li><a href="category.html" class="hover:text-brand-gold" data-en="Fish" data-ar="الأسماك">Fish</a></li>
+          <li><a href="services.html" class="hover:text-brand-gold" data-en="Services" data-ar="الخدمات">Services</a></li>
+               PHASE 2 ends here -->
+          <li><a href="offers.html" class="hover:text-brand-gold" data-en="Offers" data-ar="العروض">Offers</a></li>
+        </ul>
+      </div>
+
+      <div>
+        <h4 class="text-white font-display font-semibold mb-4" data-en="Customer Care" data-ar="خدمة العملاء">Customer Care</h4>
+        <ul class="space-y-2 text-sm">
+          <li><a href="account.html" class="hover:text-brand-gold" data-en="My account" data-ar="حسابي">My account</a></li>
+          <li><a href="account.html" class="hover:text-brand-gold" data-en="Track my order" data-ar="تتبع طلبي">Track my order</a></li>
+          <li><a href="delivery-info.html" class="hover:text-brand-gold" data-en="Delivery information" data-ar="معلومات التوصيل">Delivery information</a></li>
+          <li><a href="returns.html" class="hover:text-brand-gold" data-en="Returns &amp; refunds" data-ar="الإرجاع والاسترداد">Returns &amp; refunds</a></li>
+          <li><a href="help.html" class="hover:text-brand-gold" data-en="Help &amp; FAQ" data-ar="المساعدة والأسئلة الشائعة">Help &amp; FAQ</a></li>
+        </ul>
+      </div>
+
+      <div>
+        <h4 class="text-white font-display font-semibold mb-4" data-en="Get in touch" data-ar="تواصل معنا">Get in touch</h4>
+        <ul class="space-y-3 text-sm">
+          <li class="flex gap-2.5"><svg class="w-4 h-4 text-brand-teal shrink-0 mt-0.5" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" viewBox="0 0 24 24" aria-hidden="true"><path d="M21 11.5a8.4 8.4 0 0 1-12.6 7.3L3 20.5l1.8-5.3A8.4 8.4 0 1 1 21 11.5z"/><path d="M8.6 9.2c.2 1.6 1.1 3 2.4 4 .8.6 1.7 1 2.7 1.2.4.1.8-.1 1-.4l.4-.6c.2-.3.1-.6-.2-.8l-1.2-.7c-.3-.2-.6-.1-.8.1l-.3.4a5.3 5.3 0 0 1-2.2-2.2l.4-.3c.3-.2.3-.5.2-.8l-.7-1.2c-.2-.3-.5-.4-.8-.2l-.6.4c-.3.2-.4.6-.4 1z"/></svg><span><a href="https://wa.me/96500000000" class="hover:text-brand-gold pm-ltr">+965 0000 0000</a><br><span class="text-xs" data-en="WhatsApp — fastest reply" data-ar="واتساب — الأسرع في الرد">WhatsApp — fastest reply</span></span></li>
+          <li class="flex gap-2.5"><svg class="w-4 h-4 text-brand-teal shrink-0 mt-0.5" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" viewBox="0 0 24 24" aria-hidden="true"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.8 19.8 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6A19.8 19.8 0 0 1 2.12 4.2 2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.13.96.36 1.9.7 2.81a2 2 0 0 1-.45 2.11L8.1 9.9a16 16 0 0 0 6 6l1.26-1.26a2 2 0 0 1 2.11-.45c.9.34 1.85.57 2.81.7A2 2 0 0 1 22 16.92z"/></svg><span class="pm-ltr">+965 0000 0000</span></li>
+          <li class="flex gap-2.5"><svg class="w-4 h-4 text-brand-teal shrink-0 mt-0.5" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" viewBox="0 0 24 24" aria-hidden="true"><rect x="2" y="4" width="20" height="16" rx="2"/><path d="m22 6-10 7L2 6"/></svg><a href="mailto:hello@petmami.com" class="hover:text-brand-gold">hello@petmami.com</a></li>
+          <li class="flex gap-2.5"><svg class="w-4 h-4 text-brand-teal shrink-0 mt-0.5" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="10"/><path d="M12 6v6l4 2"/></svg><span data-en="Sun–Thu 9:00–22:00 · Fri 16:00–22:00 · Sat 9:00–22:00" data-ar="الأحد–الخميس 9:00–22:00 · الجمعة 16:00–22:00 · السبت 9:00–22:00">Sun–Thu 9:00–22:00 · Fri 16:00–22:00 · Sat 9:00–22:00</span></li>
+          <li class="flex gap-2.5"><svg class="w-4 h-4 text-brand-teal shrink-0 mt-0.5" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" viewBox="0 0 24 24" aria-hidden="true"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg><span data-en="Kuwait — delivering to all six governorates" data-ar="الكويت — نوصل إلى جميع المحافظات الست">Kuwait — delivering to all six governorates</span></li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="border-t border-white/10">
+      <div class="max-w-7xl mx-auto px-4 py-5 flex flex-wrap items-center justify-between gap-4 text-xs">
+        <div class="flex flex-wrap items-center gap-4">
+          <span>© <span id="year">2026</span> PetMami. <span data-en="All rights reserved." data-ar="جميع الحقوق محفوظة.">All rights reserved.</span></span>
+          <a href="terms.html" class="hover:text-brand-gold" data-en="Terms" data-ar="الشروط">Terms</a>
+          <a href="terms.html" class="hover:text-brand-gold" data-en="Privacy" data-ar="الخصوصية">Privacy</a>
+          <span class="text-white/50">CR: 000000</span>
+        </div>
+        <div class="flex flex-wrap items-center gap-2">
+          <span class="bg-white text-brand-navy rounded px-2 py-1 font-extrabold text-[10px]">KNET</span>
+          <span class="bg-white text-brand-navy rounded px-2 py-1 font-extrabold text-[10px]">VISA</span>
+          <span class="bg-white text-brand-navy rounded px-2 py-1 font-extrabold text-[10px]">Mastercard</span>
+          <span class="bg-white text-brand-navy rounded px-2 py-1 font-extrabold text-[10px]">Apple&nbsp;Pay</span>
+          <span class="bg-white text-brand-navy rounded px-2 py-1 font-extrabold text-[10px]" data-en="Cash" data-ar="نقداً">Cash</span>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Floating WhatsApp button -->
+  <a href="https://wa.me/96500000000" target="_blank" rel="noopener"
+     class="pm-whatsapp fixed bottom-20 md:bottom-6 end-4 z-30 w-14 h-14 rounded-full bg-[#25D366] text-white grid place-items-center shadow-lg hover:scale-105 transition"
+     aria-label="Chat on WhatsApp"><svg class="w-7 h-7" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" viewBox="0 0 24 24" aria-hidden="true"><path d="M21 11.5a8.4 8.4 0 0 1-12.6 7.3L3 20.5l1.8-5.3A8.4 8.4 0 1 1 21 11.5z"/><path d="M8.6 9.2c.2 1.6 1.1 3 2.4 4 .8.6 1.7 1 2.7 1.2.4.1.8-.1 1-.4l.4-.6c.2-.3.1-.6-.2-.8l-1.2-.7c-.3-.2-.6-.1-.8.1l-.3.4a5.3 5.3 0 0 1-2.2-2.2l.4-.3c.3-.2.3-.5.2-.8l-.7-1.2c-.2-.3-.5-.4-.8-.2l-.6.4c-.3.2-.4.6-.4 1z"/></svg></a>
+
+  <!-- Mobile bottom tab bar -->
+  <nav class="pm-tabbar md:hidden fixed bottom-0 inset-x-0 z-40 bg-white border-t border-gray-100">
+    <div class="grid grid-cols-5">
+      <a href="index.html" class="flex flex-col items-center gap-0.5 py-1.5 text-gray-400"><svg class="w-5 h-5" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" viewBox="0 0 24 24" aria-hidden="true"><path d="m3 10 9-7 9 7v10a1 1 0 0 1-1 1h-5v-7H9v7H4a1 1 0 0 1-1-1V10z"/></svg><span class="text-[10px] font-bold" data-en="Home" data-ar="الرئيسية">Home</span></a>
+      <a href="category.html" class="flex flex-col items-center gap-0.5 py-1.5 text-brand-tealdark"><svg class="w-5 h-5" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" viewBox="0 0 24 24" aria-hidden="true"><rect x="3" y="3" width="7" height="7" rx="1"/><rect x="14" y="3" width="7" height="7" rx="1"/><rect x="3" y="14" width="7" height="7" rx="1"/><rect x="14" y="14" width="7" height="7" rx="1"/></svg><span class="text-[10px] font-bold" data-en="Shop" data-ar="التسوق">Shop</span></a>
+      <a href="cart.html" class="flex flex-col items-center gap-0.5 py-1.5 text-gray-400"><svg class="w-5 h-5" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" viewBox="0 0 24 24" aria-hidden="true"><circle cx="9" cy="21" r="1"/><circle cx="20" cy="21" r="1"/><path d="M1 1h4l2.68 13.39a2 2 0 0 0 2 1.61h9.72a2 2 0 0 0 2-1.61L23 6H6"/></svg><span class="text-[10px] font-bold" data-en="Cart" data-ar="السلة">Cart</span></a>
+      <a href="account.html" class="flex flex-col items-center gap-0.5 py-1.5 text-gray-400"><svg class="w-5 h-5" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" viewBox="0 0 24 24" aria-hidden="true"><path d="M20.8 4.6a5.5 5.5 0 0 0-7.8 0L12 5.7l-1-1.1a5.5 5.5 0 0 0-7.8 7.8l1.1 1L12 21l7.7-7.7 1.1-1a5.5 5.5 0 0 0 0-7.7z"/></svg><span class="text-[10px] font-bold" data-en="Wishlist" data-ar="المفضلة">Wishlist</span></a>
+      <a href="account.html" class="flex flex-col items-center gap-0.5 py-1.5 text-gray-400"><svg class="w-5 h-5" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" viewBox="0 0 24 24" aria-hidden="true"><path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"/><circle cx="12" cy="7" r="4"/></svg><span class="text-[10px] font-bold" data-en="Account" data-ar="حسابي">Account</span></a>
+    </div>
+  </nav>
+
+  <script src="js/main.js"></script>
+</body>
+</html>
