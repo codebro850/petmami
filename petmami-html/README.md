@@ -30,8 +30,9 @@ Market research and the full design plan: [`../PETMAMI_WEBSITE_DEVELOPMENT_PLAN.
 **Just double-click `index.html`.** No server, no build step — Tailwind loads from a CDN and
 every asset path is relative.
 
-Click **العربية** in the header to switch the whole site to Arabic (RTL). The choice is
-remembered in local storage.
+To switch the whole site to Arabic (RTL), open **Account → Language** (`account.html`) and press
+the language button. The choice is remembered in local storage, so every page follows. The switch
+deliberately does **not** sit in the header — it lives in the profile, the same way BoboMart does it.
 
 ---
 
@@ -46,10 +47,10 @@ Warm, friendly and rounded — taken straight from the PetMami logo.
 | `brand-tealdark` | `#0E7F74` | Hover and small text on white |
 | `brand-coral` | `#F2705F` | Accent — sale badges, wishlist, "Buy now" |
 | `brand-gold` | `#E9A64A` | Ratings, best-seller badges, deal banners |
-| `brand-cream` | `#FFFCF8` | Page background |
+| white | `#FFFFFF` | Page background — plain white throughout |
 
 Rules:
-- Rounded corners, soft shadows, plenty of white space.
+- White background everywhere; rounded corners, soft shadows, plenty of white space.
 - Colour is used sparingly and only from the brand palette.
 - Fonts: **Fredoka** (headings) + **Nunito** (body) for English; **Baloo Bhaijaan 2** + **Tajawal** for Arabic.
 - Arabic gets a taller line-height and never letter-spacing (it breaks the letter joins).
@@ -60,7 +61,7 @@ Rules:
 
 | Page | Description |
 |---|---|
-| `index.html` | Offer strip, header, **top promo banner**, hero slider, Cats/Dogs category cards, deals of the day + countdown, best sellers, pet-profile CTA, brands, guides, reviews, newsletter |
+| `index.html` | Offer strip, header, **Shop by pet (Cats / Dogs, first on the page)**, top promo banner, hero slider, deals of the day + countdown, best sellers, pet-profile CTA, brands, guides, reviews, newsletter |
 | `category.html` | Product listing — filters (brand, price, life stage, diet), sort, grid, pagination |
 | `product.html` | Gallery, variants, Subscribe & Save, feeding guide, reviews, related products, sticky mobile buy bar |
 | `cart.html` | Cart lines with steppers, coupon, free-delivery progress, summary |
@@ -84,7 +85,7 @@ Rules:
 - **Desktop (≥ 1024px):** classic layout — logo, search, actions, then a category nav bar (Cats · Dogs · Brands · Pet Guides · Offers).
 
 ### 4.2 Language support (EN / AR)
-- Language switcher in the header; Arabic flips the whole layout to **RTL**.
+- Language switcher lives in **Account → Language** (not the header); Arabic flips the whole layout to **RTL**.
 - Every translatable element carries `data-en` / `data-ar` (and `data-placeholder-en` / `-ar` for inputs,
   `data-html-en` / `-ar` where the text contains markup).
 - The selected language persists in local storage.

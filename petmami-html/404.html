@@ -45,7 +45,7 @@
   <link rel="icon" href="images/brand/logo.jpg" />
 </head>
 
-<body class="pm-page font-en bg-brand-cream text-brand-navy pb-16 md:pb-0">
+<body class="pm-page font-en bg-white text-brand-navy pb-16 md:pb-0">
 
   <!-- ============================================================
        PARTIAL: _OfferStrip  →  Views/Shared/_OfferStrip.cshtml
@@ -82,8 +82,7 @@
 
       <!-- Actions -->
       <div class="pm-header-actions flex items-center gap-1 md:gap-2 shrink-0 ms-auto">
-        <button id="langToggle" class="pm-lang border border-gray-200 rounded-full px-3 py-1.5 text-xs font-extrabold hover:border-brand-teal hover:text-brand-tealdark transition"
-                data-en="العربية" data-ar="English">العربية</button>
+        <!-- The language switch lives in the profile (Account → Language), not here. -->
 
         <a href="login.html" class="p-2 rounded-full hover:bg-gray-100 hidden md:inline-flex" aria-label="Account"><svg class="w-5 h-5" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" viewBox="0 0 24 24" aria-hidden="true"><path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"/><circle cx="12" cy="7" r="4"/></svg></a>
 
@@ -120,11 +119,11 @@
         <a href="category.html" class="pm-nav-link hover:text-brand-tealdark " data-en="Small Pets" data-ar="الحيوانات الصغيرة">Small Pets</a>
         <a href="category.html" class="pm-nav-link hover:text-brand-tealdark " data-en="Reptiles" data-ar="الزواحف">Reptiles</a>
                PHASE 2 · PET TYPES ends here -->
+        <!-- PHASE 2 · BRANDS · SERVICES · PET GUIDES — delete this comment marker and the one below to re-enable
         <a href="brands.html" class="pm-nav-link hover:text-brand-tealdark " data-en="Brands" data-ar="الماركات">Brands</a>
-        <!-- PHASE 2 · SERVICES — delete this comment marker and the one below to re-enable
         <a href="services.html" class="pm-nav-link hover:text-brand-tealdark " data-en="Services" data-ar="الخدمات">Services</a>
-               PHASE 2 · SERVICES ends here -->
         <a href="blog.html" class="pm-nav-link hover:text-brand-tealdark " data-en="Pet Guides" data-ar="دليل الحيوانات">Pet Guides</a>
+               PHASE 2 ends here -->
         <a href="offers.html" class="pm-nav-link text-brand-coral font-extrabold ms-auto flex items-center gap-1">
           <svg class="w-4 h-4" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 3v4M12 17v4M3 12h4M17 12h4M5.6 5.6l2.8 2.8M15.6 15.6l2.8 2.8M18.4 5.6l-2.8 2.8M8.4 15.6l-2.8 2.8"/></svg><span data-en="Offers" data-ar="العروض">Offers</span>
         </a>
@@ -153,7 +152,10 @@
       <!-- PHASE 2 · SERVICES — delete this comment marker and the one below to re-enable
       <a href="services.html" class="flex items-center gap-3 p-3 rounded-xl hover:bg-brand-teallight" data-en="Services" data-ar="الخدمات">Services</a>
              PHASE 2 · SERVICES ends here -->
+      <!-- PHASE 2 · BRANDS · PET GUIDES — delete this comment marker and the one below to re-enable
+      <a href="brands.html" class="flex items-center gap-3 p-3 rounded-xl hover:bg-brand-teallight" data-en="Brands" data-ar="الماركات">Brands</a>
       <a href="blog.html" class="flex items-center gap-3 p-3 rounded-xl hover:bg-brand-teallight" data-en="Pet Guides" data-ar="دليل الحيوانات">Pet Guides</a>
+             PHASE 2 ends here -->
       <a href="account.html" class="flex items-center gap-3 p-3 rounded-xl hover:bg-brand-teallight" data-en="My account" data-ar="حسابي">My account</a>
       <a href="login.html" class="flex items-center gap-3 p-3 rounded-xl hover:bg-brand-teallight" data-en="Sign in" data-ar="تسجيل الدخول">Sign in</a>
     </nav>

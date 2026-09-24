@@ -34,11 +34,11 @@ function toggleLanguage() {
   applyLanguage(document.documentElement.lang === 'ar' ? 'en' : 'ar');
 }
 
-var langBtn = document.getElementById('langToggle');
-if (langBtn) { langBtn.addEventListener('click', toggleLanguage); }
-
-var langBtnAccount = document.getElementById('langToggleAccount');
-if (langBtnAccount) { langBtnAccount.addEventListener('click', toggleLanguage); }
+// The language switch lives in the profile (Account → Language), not in the header.
+['langToggle', 'langToggleAccount', 'langToggleAccountMain'].forEach(function (id) {
+  var btn = document.getElementById(id);
+  if (btn) { btn.addEventListener('click', toggleLanguage); }
+});
 
 (function restoreLanguage() {
   var saved = 'en';
