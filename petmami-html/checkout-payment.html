@@ -86,7 +86,7 @@
 
         <a href="login.html" class="p-2 rounded-full hover:bg-gray-100 hidden md:inline-flex" aria-label="Account"><svg class="w-5 h-5" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" viewBox="0 0 24 24" aria-hidden="true"><path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"/><circle cx="12" cy="7" r="4"/></svg></a>
 
-        <a href="account.html" class="relative p-2 rounded-full hover:bg-gray-100 hidden md:inline-flex" aria-label="Wishlist">
+        <a href="wishlist.html" class="relative p-2 rounded-full hover:bg-gray-100 hidden md:inline-flex" aria-label="Wishlist">
           <svg class="w-5 h-5" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" viewBox="0 0 24 24" aria-hidden="true"><path d="M20.8 4.6a5.5 5.5 0 0 0-7.8 0L12 5.7l-1-1.1a5.5 5.5 0 0 0-7.8 7.8l1.1 1L12 21l7.7-7.7 1.1-1a5.5 5.5 0 0 0 0-7.7z"/></svg>
           <span class="absolute top-0 end-0 bg-brand-coral text-white text-[10px] font-bold rounded-full min-w-[17px] h-[17px] flex items-center justify-center px-1">3</span>
         </a>
@@ -111,8 +111,8 @@
     <!-- Desktop nav -->
     <nav class="pm-nav hidden lg:block border-t border-gray-100">
       <div class="max-w-7xl mx-auto px-4 flex items-center gap-6 text-sm font-bold text-gray-600 h-11">
-        <a href="category.html" class="pm-nav-link hover:text-brand-tealdark " data-en="Cats" data-ar="القطط">Cats</a>
-        <a href="category.html" class="pm-nav-link hover:text-brand-tealdark " data-en="Dogs" data-ar="الكلاب">Dogs</a>
+        <a href="cats.html" class="pm-nav-link hover:text-brand-tealdark " data-en="Cats" data-ar="القطط">Cats</a>
+        <a href="dogs.html" class="pm-nav-link hover:text-brand-tealdark " data-en="Dogs" data-ar="الكلاب">Dogs</a>
         <!-- PHASE 2 · PET TYPES — delete this comment marker and the one below to re-enable
         <a href="category.html" class="pm-nav-link hover:text-brand-tealdark " data-en="Birds" data-ar="الطيور">Birds</a>
         <a href="category.html" class="pm-nav-link hover:text-brand-tealdark " data-en="Fish" data-ar="الأسماك">Fish</a>
@@ -139,8 +139,8 @@
       <button id="drawerClose" class="p-2 rounded-full hover:bg-gray-100" aria-label="Close"><svg class="w-5 h-5" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" viewBox="0 0 24 24" aria-hidden="true"><path d="M18 6 6 18M6 6l12 12"/></svg></button>
     </div>
     <nav class="p-3 text-sm font-bold text-brand-navy">
-      <a href="category.html" class="flex items-center gap-3 p-3 rounded-xl hover:bg-brand-teallight" data-en="Cats" data-ar="القطط">Cats</a>
-      <a href="category.html" class="flex items-center gap-3 p-3 rounded-xl hover:bg-brand-teallight" data-en="Dogs" data-ar="الكلاب">Dogs</a>
+      <a href="cats.html" class="flex items-center gap-3 p-3 rounded-xl hover:bg-brand-teallight" data-en="Cats" data-ar="القطط">Cats</a>
+      <a href="dogs.html" class="flex items-center gap-3 p-3 rounded-xl hover:bg-brand-teallight" data-en="Dogs" data-ar="الكلاب">Dogs</a>
       <!-- PHASE 2 · PET TYPES — delete this comment marker and the one below to re-enable
       <a href="category.html" class="flex items-center gap-3 p-3 rounded-xl hover:bg-brand-teallight" data-en="Birds" data-ar="الطيور">Birds</a>
       <a href="category.html" class="flex items-center gap-3 p-3 rounded-xl hover:bg-brand-teallight" data-en="Fish" data-ar="الأسماك">Fish</a>
@@ -166,7 +166,7 @@
       <h1 class="font-display text-3xl font-semibold mb-6" data-en="Checkout" data-ar="إتمام الشراء">Checkout</h1>
       <div class="flex flex-wrap items-center gap-3 mb-8"><span class="flex items-center gap-2 text-sm font-extrabold text-brand-navy"><span class="w-7 h-7 rounded-full bg-green-600 text-white grid place-items-center"><svg class="w-4 h-4" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" viewBox="0 0 24 24" aria-hidden="true"><path d="m20 6-11 11-5-5"/></svg></span><span class="hidden sm:inline" data-en="Address" data-ar="العنوان">Address</span></span><span class="w-6 h-0.5 bg-gray-200"></span><span class="flex items-center gap-2 text-sm font-extrabold text-brand-navy"><span class="w-7 h-7 rounded-full bg-brand-teal text-white grid place-items-center text-xs font-extrabold">2</span><span class="hidden sm:inline" data-en="Payment" data-ar="الدفع">Payment</span></span><span class="w-6 h-0.5 bg-gray-200"></span><span class="flex items-center gap-2 text-sm font-extrabold text-gray-400"><span class="w-7 h-7 rounded-full bg-gray-200 text-gray-500 grid place-items-center text-xs font-extrabold">3</span><span class="hidden sm:inline" data-en="Confirm" data-ar="التأكيد">Confirm</span></span></div>
 
-      <form action="checkout-confirm.html" method="post" class="grid lg:grid-cols-[1fr,360px] gap-8">
+      <form class="grid lg:grid-cols-[1fr,360px] gap-8">
         <div>
           <!-- Delivering to -->
           <section class="bg-white rounded-2xl border border-gray-100 p-6 mb-5">
@@ -176,7 +176,13 @@
                 <div>
                   <p class="text-sm font-extrabold" data-en="Delivering to" data-ar="التوصيل إلى">Delivering to</p>
                   <p class="text-sm text-gray-600 mt-1">Salmiya, Block 10, Street 5, Building 22, Floor 3</p>
-                  <p class="text-xs text-gray-400 mt-1"><span data-en="Today" data-ar="اليوم">Today</span> · <span class="pm-ltr">10:00 – 13:00</span></p>
+                  <div class="flex items-center gap-2 mt-2 bg-brand-teallight rounded-lg px-3 py-2">
+                    <svg class="w-4 h-4 text-brand-teal shrink-0" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" viewBox="0 0 24 24" aria-hidden="true"><rect x="3" y="4" width="18" height="18" rx="2"/><path d="M16 2v4M8 2v4M3 10h18"/></svg>
+                    <span class="text-sm font-bold text-brand-tealdark"><span data-en="Today" data-ar="اليوم">Today</span>, <span class="pm-ltr">18 Sep</span></span>
+                    <span class="text-gray-300">|</span>
+                    <svg class="w-4 h-4 text-brand-teal shrink-0" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="10"/><path d="M12 6v6l4 2"/></svg>
+                    <span class="text-sm font-bold text-brand-tealdark pm-ltr">10:00 – 13:00</span>
+                  </div>
                 </div>
               </div>
               <a href="checkout-address.html" class="text-xs font-extrabold text-brand-tealdark hover:underline" data-en="Change" data-ar="تغيير">Change</a>
@@ -219,6 +225,20 @@
               <svg class="w-4 h-4" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" viewBox="0 0 24 24" aria-hidden="true"><rect x="3" y="11" width="18" height="11" rx="2"/><path d="M7 11V7a5 5 0 0 1 10 0v4"/></svg><span data-en="You'll be redirected to the secure payment page to complete your order." data-ar="سيتم تحويلك إلى صفحة الدفع الآمنة لإتمام طلبك.">You'll be redirected to the secure payment page to complete your order.</span></p>
           </section>
 
+          <!-- Voucher / coupon code -->
+          <section class="bg-white rounded-2xl border border-gray-100 p-6 mb-5">
+            <h2 class="font-display text-lg font-semibold mb-3 flex items-center gap-2">
+              <svg class="w-5 h-5 text-brand-gold" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" viewBox="0 0 24 24" aria-hidden="true"><path d="M2 9a3 3 0 0 1 0 6v2a2 2 0 0 0 2 2h16a2 2 0 0 0 2-2v-2a3 3 0 0 1 0-6V7a2 2 0 0 0-2-2H4a2 2 0 0 0-2 2Z"/><path d="M13 5v2M13 17v2M13 11v2"/></svg>
+              <span data-en="Voucher / promo code" data-ar="كود الخصم / القسيمة">Voucher / promo code</span></h2>
+            <div class="flex gap-2">
+              <input type="text" name="CouponCode" class="pm-input flex-1 rounded-xl border border-gray-200 px-4 py-2.5 text-sm uppercase tracking-wider"
+                     data-placeholder-en="Enter code" data-placeholder-ar="أدخل الكود" placeholder="Enter code" />
+              <button type="button" class="shrink-0 bg-brand-navy text-white text-sm font-extrabold px-5 py-2.5 rounded-xl hover:bg-brand-navy/90 transition"
+                      data-en="Apply" data-ar="تطبيق">Apply</button>
+            </div>
+            <p class="text-xs text-gray-400 mt-2" data-en="One voucher per order. Discount will appear in the order summary." data-ar="قسيمة واحدة لكل طلب. سيظهر الخصم في ملخص الطلب.">One voucher per order. Discount will appear in the order summary.</p>
+          </section>
+
           <!-- Gift note + terms -->
           <section class="bg-white rounded-2xl border border-gray-100 p-6 mb-5">
             <label class="flex items-center gap-2.5 text-sm cursor-pointer mb-3">
@@ -229,8 +249,8 @@
               <span data-en="I agree to the Terms &amp; Conditions and Privacy Policy" data-ar="أوافق على الشروط والأحكام وسياسة الخصوصية">I agree to the Terms &amp; Conditions and Privacy Policy</span></label>
           </section>
 
-          <button type="submit" class="w-full flex items-center justify-center gap-2 bg-brand-coral hover:bg-brand-coraldark text-white font-extrabold py-4 rounded-full transition">
-            <svg class="w-5 h-5" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" viewBox="0 0 24 24" aria-hidden="true"><rect x="3" y="11" width="18" height="11" rx="2"/><path d="M7 11V7a5 5 0 0 1 10 0v4"/></svg><span data-en="Place order" data-ar="تأكيد الطلب">Place order</span></button>
+          <a href="checkout-confirm.html" class="w-full flex items-center justify-center gap-2 bg-brand-coral hover:bg-brand-coraldark text-white font-extrabold py-4 rounded-full transition">
+            <svg class="w-5 h-5" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" viewBox="0 0 24 24" aria-hidden="true"><rect x="3" y="11" width="18" height="11" rx="2"/><path d="M7 11V7a5 5 0 0 1 10 0v4"/></svg><span data-en="Place order" data-ar="تأكيد الطلب">Place order</span></a>
         </div>
 
         <aside class="bg-white rounded-2xl border border-gray-100 p-6 h-fit lg:sticky lg:top-32">
@@ -283,8 +303,8 @@
       <div>
         <h4 class="text-white font-display font-semibold mb-4" data-en="Shop" data-ar="التسوق">Shop</h4>
         <ul class="space-y-2 text-sm">
-          <li><a href="category.html" class="hover:text-brand-gold" data-en="Cats" data-ar="القطط">Cats</a></li>
-          <li><a href="category.html" class="hover:text-brand-gold" data-en="Dogs" data-ar="الكلاب">Dogs</a></li>
+          <li><a href="cats.html" class="hover:text-brand-gold" data-en="Cats" data-ar="القطط">Cats</a></li>
+          <li><a href="dogs.html" class="hover:text-brand-gold" data-en="Dogs" data-ar="الكلاب">Dogs</a></li>
           <!-- PHASE 2 · SERVICES + PET TYPES — delete this comment marker and the one below to re-enable
           <li><a href="category.html" class="hover:text-brand-gold" data-en="Birds" data-ar="الطيور">Birds</a></li>
           <li><a href="category.html" class="hover:text-brand-gold" data-en="Fish" data-ar="الأسماك">Fish</a></li>
@@ -347,7 +367,7 @@
       <a href="index.html" class="flex flex-col items-center gap-0.5 py-1.5 text-gray-400"><svg class="w-5 h-5" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" viewBox="0 0 24 24" aria-hidden="true"><path d="m3 10 9-7 9 7v10a1 1 0 0 1-1 1h-5v-7H9v7H4a1 1 0 0 1-1-1V10z"/></svg><span class="text-[10px] font-bold" data-en="Home" data-ar="الرئيسية">Home</span></a>
       <a href="category.html" class="flex flex-col items-center gap-0.5 py-1.5 text-gray-400"><svg class="w-5 h-5" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" viewBox="0 0 24 24" aria-hidden="true"><rect x="3" y="3" width="7" height="7" rx="1"/><rect x="14" y="3" width="7" height="7" rx="1"/><rect x="3" y="14" width="7" height="7" rx="1"/><rect x="14" y="14" width="7" height="7" rx="1"/></svg><span class="text-[10px] font-bold" data-en="Shop" data-ar="التسوق">Shop</span></a>
       <a href="cart.html" class="flex flex-col items-center gap-0.5 py-1.5 text-brand-tealdark"><svg class="w-5 h-5" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" viewBox="0 0 24 24" aria-hidden="true"><circle cx="9" cy="21" r="1"/><circle cx="20" cy="21" r="1"/><path d="M1 1h4l2.68 13.39a2 2 0 0 0 2 1.61h9.72a2 2 0 0 0 2-1.61L23 6H6"/></svg><span class="text-[10px] font-bold" data-en="Cart" data-ar="السلة">Cart</span></a>
-      <a href="account.html" class="flex flex-col items-center gap-0.5 py-1.5 text-gray-400"><svg class="w-5 h-5" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" viewBox="0 0 24 24" aria-hidden="true"><path d="M20.8 4.6a5.5 5.5 0 0 0-7.8 0L12 5.7l-1-1.1a5.5 5.5 0 0 0-7.8 7.8l1.1 1L12 21l7.7-7.7 1.1-1a5.5 5.5 0 0 0 0-7.7z"/></svg><span class="text-[10px] font-bold" data-en="Wishlist" data-ar="المفضلة">Wishlist</span></a>
+      <a href="wishlist.html" class="flex flex-col items-center gap-0.5 py-1.5 text-gray-400"><svg class="w-5 h-5" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" viewBox="0 0 24 24" aria-hidden="true"><path d="M20.8 4.6a5.5 5.5 0 0 0-7.8 0L12 5.7l-1-1.1a5.5 5.5 0 0 0-7.8 7.8l1.1 1L12 21l7.7-7.7 1.1-1a5.5 5.5 0 0 0 0-7.7z"/></svg><span class="text-[10px] font-bold" data-en="Wishlist" data-ar="المفضلة">Wishlist</span></a>
       <a href="account.html" class="flex flex-col items-center gap-0.5 py-1.5 text-gray-400"><svg class="w-5 h-5" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" viewBox="0 0 24 24" aria-hidden="true"><path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"/><circle cx="12" cy="7" r="4"/></svg><span class="text-[10px] font-bold" data-en="Account" data-ar="حسابي">Account</span></a>
     </div>
   </nav>
