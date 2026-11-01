@@ -176,16 +176,45 @@
                 <div>
                   <p class="text-sm font-extrabold" data-en="Delivering to" data-ar="التوصيل إلى">Delivering to</p>
                   <p class="text-sm text-gray-600 mt-1">Salmiya, Block 10, Street 5, Building 22, Floor 3</p>
-                  <div class="flex items-center gap-2 mt-2 bg-brand-teallight rounded-lg px-3 py-2">
-                    <svg class="w-4 h-4 text-brand-teal shrink-0" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" viewBox="0 0 24 24" aria-hidden="true"><rect x="3" y="4" width="18" height="18" rx="2"/><path d="M16 2v4M8 2v4M3 10h18"/></svg>
-                    <span class="text-sm font-bold text-brand-tealdark"><span data-en="Today" data-ar="اليوم">Today</span>, <span class="pm-ltr">18 Sep</span></span>
-                    <span class="text-gray-300">|</span>
-                    <svg class="w-4 h-4 text-brand-teal shrink-0" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="10"/><path d="M12 6v6l4 2"/></svg>
-                    <span class="text-sm font-bold text-brand-tealdark pm-ltr">10:00 – 13:00</span>
-                  </div>
                 </div>
               </div>
               <a href="checkout-address.html" class="text-xs font-extrabold text-brand-tealdark hover:underline" data-en="Change" data-ar="تغيير">Change</a>
+            </div>
+          </section>
+
+          <!-- Delivery date & time -->
+          <section class="bg-white rounded-2xl border border-gray-100 p-6 mb-5">
+            <h2 class="font-display text-lg font-semibold mb-4 flex items-center gap-2">
+              <svg class="w-5 h-5 text-brand-teal" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" viewBox="0 0 24 24" aria-hidden="true"><rect x="3" y="4" width="18" height="18" rx="2"/><path d="M16 2v4M8 2v4M3 10h18"/></svg>
+              <span data-en="Delivery date &amp; time" data-ar="تاريخ ووقت التوصيل">Delivery date &amp; time</span></h2>
+
+            <p class="text-sm text-gray-500 mb-3" data-en="Choose your preferred delivery slot" data-ar="اختر موعد التوصيل المفضل لديك">Choose your preferred delivery slot</p>
+
+            <div class="flex gap-2 overflow-x-auto no-scrollbar pb-1 mb-4" data-select-group>
+              <button type="button" class="pm-chip is-active shrink-0 border border-gray-200 rounded-full px-4 py-2 text-sm font-bold bg-white">
+                <span data-en="Today" data-ar="اليوم">Today</span> · <span class="pm-ltr">18 Sep</span></button>
+              <button type="button" class="pm-chip shrink-0 border border-gray-200 rounded-full px-4 py-2 text-sm font-bold bg-white">
+                <span data-en="Tomorrow" data-ar="غداً">Tomorrow</span> · <span class="pm-ltr">19 Sep</span></button>
+              <button type="button" class="pm-chip shrink-0 border border-gray-200 rounded-full px-4 py-2 text-sm font-bold bg-white pm-ltr">Sat · 20 Sep</button>
+              <button type="button" class="pm-chip shrink-0 border border-gray-200 rounded-full px-4 py-2 text-sm font-bold bg-white pm-ltr">Sun · 21 Sep</button>
+            </div>
+
+            <div class="grid grid-cols-2 sm:grid-cols-3 gap-3" data-select-group>
+              <button type="button" class="pm-slot is-active border-2 border-gray-200 rounded-xl p-3 text-center bg-white">
+                <strong class="block text-sm pm-ltr">10:00 – 13:00</strong>
+                <small class="text-xs text-gray-400" data-en="Available" data-ar="متاح">Available</small></button>
+              <button type="button" class="pm-slot border-2 border-gray-200 rounded-xl p-3 text-center bg-white">
+                <strong class="block text-sm pm-ltr">13:00 – 16:00</strong>
+                <small class="text-xs text-gray-400" data-en="Available" data-ar="متاح">Available</small></button>
+              <button type="button" class="pm-slot border-2 border-gray-200 rounded-xl p-3 text-center bg-white">
+                <strong class="block text-sm pm-ltr">16:00 – 19:00</strong>
+                <small class="text-xs text-gray-400" data-en="Available" data-ar="متاح">Available</small></button>
+              <button type="button" disabled class="pm-slot border-2 border-gray-200 rounded-xl p-3 text-center bg-white opacity-40 cursor-not-allowed">
+                <strong class="block text-sm pm-ltr">19:00 – 22:00</strong>
+                <small class="text-xs text-gray-400" data-en="Fully booked" data-ar="محجوز بالكامل">Fully booked</small></button>
+              <button type="button" class="pm-slot border-2 border-gray-200 rounded-xl p-3 text-center bg-white">
+                <strong class="block text-sm" data-en="Express (2 hours)" data-ar="سريع (ساعتان)">Express (2 hours)</strong>
+                <small class="text-xs text-gray-400 pm-ltr">+ KD 2.000</small></button>
             </div>
           </section>
 
