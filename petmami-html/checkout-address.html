@@ -47,6 +47,14 @@
 
 <body class="pm-page font-en bg-white text-brand-navy pb-16 md:pb-0">
 
+  <!-- TEMP: test links for sign-in / register (mobile only — remove before launch) -->
+  <div class="md:hidden bg-brand-gold/20 text-center py-1.5 px-4 text-xs font-bold">
+    <span class="text-brand-navy">Test:</span>
+    <a href="login.html" class="text-brand-tealdark underline mx-1">Sign in</a> ·
+    <a href="register.html" class="text-brand-tealdark underline mx-1">Create account</a> ·
+    <a href="account.html" class="text-brand-tealdark underline mx-1">My account</a>
+  </div>
+
   <!-- ============================================================
        PARTIAL: _OfferStrip  →  Views/Shared/_OfferStrip.cshtml
        .NET: bind the threshold (10 KD) from settings
@@ -220,26 +228,22 @@
               <span data-en="Delivery address" data-ar="عنوان التوصيل">Delivery address</span></h2>
 
             <div class="grid sm:grid-cols-2 gap-4">
-              <div>
-                <label for="governorate" class="block text-sm font-extrabold mb-1.5">
-                  <span data-en="Governorate" data-ar="المحافظة">Governorate</span> <span class="text-brand-coral">*</span></label>
-                <select id="governorate" name="Address.Governorate" class="pm-select w-full rounded-xl border border-gray-200 px-4 py-3 text-sm outline-none bg-white" required>
-                  <option value="" data-en="Select governorate" data-ar="اختر المحافظة">Select governorate</option>
-                  <option value="capital" data-en="Al Asimah (Capital)" data-ar="العاصمة">Al Asimah (Capital)</option>
-                  <option value="hawalli" data-en="Hawalli" data-ar="حولي">Hawalli</option>
-                  <option value="farwaniya" data-en="Al Farwaniyah" data-ar="الفروانية">Al Farwaniyah</option>
-                  <option value="mubarak" data-en="Mubarak Al-Kabeer" data-ar="مبارك الكبير">Mubarak Al-Kabeer</option>
-                  <option value="ahmadi" data-en="Al Ahmadi" data-ar="الأحمدي">Al Ahmadi</option>
-                  <option value="jahra" data-en="Al Jahra" data-ar="الجهراء">Al Jahra</option>
-                </select>
-              </div>
-              <div>
+              <div class="sm:col-span-2">
                 <label for="area" class="block text-sm font-extrabold mb-1.5">
                   <span data-en="Area" data-ar="المنطقة">Area</span> <span class="text-brand-coral">*</span></label>
-                <select id="area" name="Address.Area" class="pm-select w-full rounded-xl border border-gray-200 px-4 py-3 text-sm outline-none bg-white" disabled required>
+                <select id="area" name="Address.Area" class="pm-select w-full rounded-xl border border-gray-200 px-4 py-3 text-sm outline-none bg-white" required>
                   <option value="" data-en="Select area" data-ar="اختر المنطقة">Select area</option>
+                  <option value="salmiya" data-en="Salmiya" data-ar="السالمية">Salmiya</option>
+                  <option value="hawalli" data-en="Hawalli" data-ar="حولي">Hawalli</option>
+                  <option value="jabriya" data-en="Jabriya" data-ar="الجابرية">Jabriya</option>
+                  <option value="sharq" data-en="Sharq" data-ar="شرق">Sharq</option>
+                  <option value="shuwaikh" data-en="Shuwaikh" data-ar="الشويخ">Shuwaikh</option>
+                  <option value="mangaf" data-en="Mangaf" data-ar="المنقف">Mangaf</option>
+                  <option value="farwaniya" data-en="Farwaniya" data-ar="الفروانية">Farwaniya</option>
+                  <option value="sabah-al-salem" data-en="Sabah Al-Salem" data-ar="صباح السالم">Sabah Al-Salem</option>
+                  <option value="fintas" data-en="Fintas" data-ar="الفنطاس">Fintas</option>
+                  <option value="mahboula" data-en="Mahboula" data-ar="المهبولة">Mahboula</option>
                 </select>
-                <p class="text-xs text-gray-400 mt-1" data-en="Choose a governorate first" data-ar="اختر المحافظة أولاً">Choose a governorate first</p>
               </div>
 
             <div class="">
@@ -388,7 +392,7 @@
         <h4 class="text-white font-display font-semibold mb-4" data-en="Customer Care" data-ar="خدمة العملاء">Customer Care</h4>
         <ul class="space-y-2 text-sm">
           <li><a href="account.html" class="hover:text-brand-gold" data-en="My account" data-ar="حسابي">My account</a></li>
-          <li><a href="account.html" class="hover:text-brand-gold" data-en="Track my order" data-ar="تتبع طلبي">Track my order</a></li>
+          <li><a href="account-orders.html" class="hover:text-brand-gold" data-en="Track my order" data-ar="تتبع طلبي">Track my order</a></li>
           <li><a href="delivery-info.html" class="hover:text-brand-gold" data-en="Delivery information" data-ar="معلومات التوصيل">Delivery information</a></li>
           <li><a href="returns.html" class="hover:text-brand-gold" data-en="Returns &amp; refunds" data-ar="الإرجاع والاسترداد">Returns &amp; refunds</a></li>
           <li><a href="help.html" class="hover:text-brand-gold" data-en="Help &amp; FAQ" data-ar="المساعدة والأسئلة الشائعة">Help &amp; FAQ</a></li>
